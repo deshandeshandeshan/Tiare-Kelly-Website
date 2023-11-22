@@ -1,0 +1,26 @@
+.home {
+  background-color: #f7f3f0;
+}
+
+.home-page {
+  display: grid;
+}
+
+@media only screen and (min-width: 50rem) {
+}
+
+@media only screen and (min-width: 70rem) {
+  .home-page {
+    padding-top: 40rem;
+  }
+
+  .home-main-grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .home-heading {
+    grid-column: 1 / 10;
+    grid-row: 1 / 2;
+  }
+}
