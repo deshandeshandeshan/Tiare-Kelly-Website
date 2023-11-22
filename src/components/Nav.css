@@ -1,0 +1,23 @@
+.sticky-nav {
+  width: 20rem;
+  position: fixed;
+  top: 50rem;
+  left: 2rem;
+  background-color: #f7f3f0;
+  border: transparent 0.2rem;
+  border-radius: 1.5rem;
+  filter: drop-shadow(0 0.3rem 0.15rem black);
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.nav-list {
+  padding: 0.5rem;
+}
+
+.nav-list-item {
+  text-align: center;
+}

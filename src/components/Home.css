@@ -11,7 +11,15 @@
 
 @media only screen and (min-width: 70rem) {
   .home-page {
-    padding-top: 40rem;
+    padding-top: 30rem;
+  }
+
+  .home-heading {
+    font-size: 18rem;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-weight: normal;
+    text-indent: -0.55rem;
   }
 
   .home-main-grid {
@@ -21,6 +29,11 @@
 
   .home-heading {
     grid-column: 1 / 10;
+    grid-row: 1 / 2;
+  }
+
+  .contact-details {
+    grid-column: 10 / 12;
     grid-row: 1 / 2;
   }
 }
