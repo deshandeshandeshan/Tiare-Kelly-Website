@@ -2,25 +2,25 @@ import "./SelectedWork.css";
 
 const SelectedWork = () => {
   return (
-    <div className="works-page">
-      <div className="work-intro">
-        <p className="work-intro-text">
+    <div className="selected-works-page" id="selected-works">
+      <div className="selected-works-intro">
+        <p className="selected-works-intro-text">
           Tiare Kelly is a Composer ,Musician & Artist based in Tamaki Makaurau
           (Auckland), these are her selected works.
         </p>
       </div>
-      <div className="work-headings">
-        <ul className="work-headings-list">
-          <li className="work-headings-list-item">
+      <div className="selected-works-headings">
+        <ul className="selected-works-headings-list">
+          <li className="selected-works-headings-list-item">
             <h3>TITLE</h3>
           </li>
-          <li className="work-headings-list-item">
+          <li className="selected-works-headings-list-item">
             <h3>SELECTED WORK</h3>
           </li>
-          <li className="work-headings-list-item">
+          <li className="selected-works-headings-list-item">
             <h3>TYPE</h3>
           </li>
-          <li className="work-headings-list-item">
+          <li className="selected-works-headings-list-item">
             <h3>DATE</h3>
           </li>
         </ul>

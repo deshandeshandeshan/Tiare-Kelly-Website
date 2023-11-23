@@ -6,7 +6,7 @@ import Extras from "./Extras";
 const Home = () => {
   return (
     <div className="home">
-      <div className="home-page home-main-grid">
+      <div className="home-page home-main-grid" id="home">
         <h1 className="home-heading">Tiare Kelly</h1>
         <div className="contact-details">
           <ul className="contact-details-list">

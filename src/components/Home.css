@@ -20,11 +20,17 @@
     margin-block-end: 0em;
     font-weight: normal;
     text-indent: -0.55rem;
+    padding-left: 1rem;
+  }
+
+  .contact-details {
+    padding-top: 13rem;
   }
 
   .home-main-grid {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: auto 10rem;
+    gap: 1rem;
   }
 
   .home-heading {
@@ -33,7 +39,7 @@
   }
 
   .contact-details {
-    grid-column: 10 / 12;
+    grid-column: 11 / 13;
     grid-row: 1 / 2;
   }
 }

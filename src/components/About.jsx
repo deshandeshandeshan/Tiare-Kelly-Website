@@ -2,7 +2,7 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="about-page">
+    <div className="about-page" id="about">
       <h2 className="about-page-intro">
         Tiare Kelly is a Composer ,Musician & Artist based in Tamaki Makaurau
         (Auckland)

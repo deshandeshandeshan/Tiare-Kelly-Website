@@ -2,4 +2,7 @@
 }
 
 @media only screen and (min-width: 70rem) {
+  .selected-works-page {
+    height: 100vh;
+  }
 }
