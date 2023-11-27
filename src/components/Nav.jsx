@@ -39,7 +39,7 @@ const Nav = () => {
             spy={true}
             to="about"
             smooth={true}
-            offset={0}
+            offset={-50}
             duration={900}
           >
             About
@@ -52,7 +52,7 @@ const Nav = () => {
             spy={true}
             to="extras"
             smooth={true}
-            offset={0}
+            offset={-50}
             duration={900}
           >
             Extras
