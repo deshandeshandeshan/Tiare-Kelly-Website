@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url("https://use.typekit.net/xms2rkt.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +13,9 @@ h2,
 h3,
 a {
   color: #542316;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a,

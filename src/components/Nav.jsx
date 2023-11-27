@@ -13,7 +13,7 @@ const Nav = () => {
             spy={true}
             to="home"
             smooth={true}
-            offset={0}
+            offset={-50}
             duration={900}
           >
             <GoDotFill />
