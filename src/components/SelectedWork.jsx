@@ -9,23 +9,21 @@ const SelectedWork = () => {
           (Auckland), these are her selected works.
         </p>
       </div>
-      <div className="selected-works-headings">
+      <div className="selected-works">
         <ul className="selected-works-headings-list">
-          <li className="selected-works-headings-list-item">
+          <li className="headings-list-item headings-list-item-a">
             <h3>TITLE</h3>
           </li>
-          <li className="selected-works-headings-list-item">
+          <li className="headings-list-item headings-list-item-b">
             <h3>SELECTED WORK</h3>
           </li>
-          <li className="selected-works-headings-list-item">
+          <li className="headings-list-item headings-list-item-c">
             <h3>TYPE</h3>
           </li>
-          <li className="selected-works-headings-list-item">
+          <li className="headings-list-item headings-list-item-d">
             <h3>DATE</h3>
           </li>
         </ul>
-      </div>
-      <div className="selected-works">
         <ul className="selected-works-list">
           <li className="selected-works-list-item">
             <p>TEA PROMO VIDEO</p>
