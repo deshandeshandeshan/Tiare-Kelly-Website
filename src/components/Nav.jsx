@@ -26,7 +26,7 @@ const Nav = () => {
             spy={true}
             to="selected-works"
             smooth={true}
-            offset={0}
+            offset={-50}
             duration={900}
           >
             Work
