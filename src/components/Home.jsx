@@ -10,9 +10,15 @@ const Home = () => {
         <h1 className="home-heading">Tiare Kelly</h1>
         <div className="contact-details">
           <ul className="contact-details-list">
-            <li className="contact-details-list-item">Contact</li>
-            <li className="contact-details-list-item">+64 000 000 0000</li>
-            <li className="contact-details-list-item">tiarekelly@gmail.com</li>
+            <li className="contact-details-list-item">
+              <p>Contact</p>
+            </li>
+            <li className="contact-details-list-item">
+              <p>+64 000 000 0000</p>
+            </li>
+            <li className="contact-details-list-item">
+              <p>tiarekelly@gmail.com</p>
+            </li>
           </ul>
         </div>
       </div>
