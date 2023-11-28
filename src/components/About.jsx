@@ -11,7 +11,7 @@ const About = () => {
         <p className="about-description-paragraph about-paragraph-1">
           Raised in Auckland city, New Zealand, Tiare Kelly began her career as
           a multi instrumentalist. Playing the electric guitar in the band
-          ‘Daddy and the Dames’ at 14.Playing the double bass in a concert band
+          ‘Daddy and the Dames’ at 14. Playing the double bass in a concert band
           and orchestra throughout her high school career.
         </p>
         <p className="about-description-paragraph about-paragraph-2">

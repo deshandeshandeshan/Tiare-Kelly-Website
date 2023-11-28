@@ -13,8 +13,8 @@ const Nav = () => {
             spy={true}
             to="home"
             smooth={true}
-            offset={-50}
-            duration={900}
+            offset={0}
+            duration={1200}
           >
             <GoDotFill />
           </Link>
@@ -26,10 +26,10 @@ const Nav = () => {
             spy={true}
             to="selected-works"
             smooth={true}
-            offset={-50}
-            duration={900}
+            offset={0}
+            duration={1200}
           >
-            Work
+            WORK
           </Link>
         </li>
         <li className="nav-list-item">
@@ -39,10 +39,10 @@ const Nav = () => {
             spy={true}
             to="about"
             smooth={true}
-            offset={-50}
-            duration={900}
+            offset={0}
+            duration={1200}
           >
-            About
+            ABOUT
           </Link>
         </li>
         <li className="nav-list-item">
@@ -52,10 +52,10 @@ const Nav = () => {
             spy={true}
             to="extras"
             smooth={true}
-            offset={-50}
-            duration={900}
+            offset={0}
+            duration={1200}
           >
-            Extras
+            EXTRAS
           </Link>
         </li>
       </ul>

@@ -28,3 +28,9 @@ ul {
 a {
   cursor: pointer;
 }
+
+.selected-works-page,
+.about-page,
+.extras-page {
+  padding-top: 5rem;
+}

@@ -6,7 +6,7 @@ const SelectedWork = () => {
     <div className="selected-works-page" id="selected-works">
       <div className="selected-works-intro">
         <p className="selected-works-intro-text">
-          Tiare Kelly is a Composer ,Musician & Artist based in Tamaki Makaurau
+          Tiare Kelly is a Composer, Musician & Artist based in Tamaki Makaurau
           (Auckland), these are her selected works.
         </p>
       </div>
