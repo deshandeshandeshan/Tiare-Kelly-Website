@@ -77,19 +77,20 @@ const MusicPlayer = () => {
           {calculateTime(currentTime)} /{" "}
           {duration && !isNaN(duration) && calculateTime(duration)}
         </small>
-
-        <button className="audio-button prev-song">
-          <MdSkipPrevious />
-        </button>
-        <button
-          onClick={togglePlayPause}
-          className="audio-button toggle-play-pause"
-        >
-          {isPlaying ? <MdPause /> : <MdPlayArrow />}
-        </button>
-        <button className="audio-button next-song">
-          <MdSkipNext />
-        </button>
+        <div className="audio-control-buttons">
+          <button className="audio-button prev-song">
+            <MdSkipPrevious />
+          </button>
+          <button
+            onClick={togglePlayPause}
+            className="audio-button toggle-play-pause"
+          >
+            {isPlaying ? <MdPause /> : <MdPlayArrow />}
+          </button>
+          <button className="audio-button next-song">
+            <MdSkipNext />
+          </button>
+        </div>
       </div>
     </div>
   );
