@@ -58,28 +58,39 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div>
+    <div className="audio-player">
       <audio ref={audioPlayer} src={song}></audio>
-      <button>
-        <MdSkipPrevious />
-      </button>
-      <button onClick={togglePlayPause}>
-        {isPlaying ? <MdPause /> : <MdPlayArrow />}
-      </button>
-      <button>
-        <MdSkipNext />
-      </button>
-
-      <div>{calculateTime(currentTime)}</div>
-      <div>
+      <div className="song-name">
+        <h3>Song Name</h3>
+      </div>
+      <div className="audio-progress-bar">
         <input
           type="range"
           defaultValue="0"
           ref={progressBar}
           onChange={changeRange}
+          className="progress-bar"
         />
       </div>
-      <div>{duration && !isNaN(duration) && calculateTime(duration)}</div>
+      <div className="audio-controls">
+        <small className="audio-time-before-after">
+          {calculateTime(currentTime)} /{" "}
+          {duration && !isNaN(duration) && calculateTime(duration)}
+        </small>
+
+        <button className="audio-button prev-song">
+          <MdSkipPrevious />
+        </button>
+        <button
+          onClick={togglePlayPause}
+          className="audio-button toggle-play-pause"
+        >
+          {isPlaying ? <MdPause /> : <MdPlayArrow />}
+        </button>
+        <button className="audio-button next-song">
+          <MdSkipNext />
+        </button>
+      </div>
     </div>
   );
 };
