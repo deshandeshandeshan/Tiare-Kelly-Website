@@ -1,3 +1,19 @@
+.selected-work-description.hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.selected-work-description.show {
+  max-height: 20rem;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.5, 0.1, 0.5, 0.1);
+}
+
+.selected-works-list-item {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 50rem) {
 }
 

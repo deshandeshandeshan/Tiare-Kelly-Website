@@ -1,8 +1,18 @@
 import "./SelectedWork.css";
 import selectedWorksData from "../assets/data/SelectedWorksData";
 import horizon from "../assets/images/horizon.jpg";
+import { useState } from "react";
 
 const SelectedWork = () => {
+  const [selected, setSelected] = useState(null);
+
+  const toggle = (i) => {
+    if (selected === i) {
+      return setSelected(null);
+    }
+    setSelected(i);
+  };
+
   return (
     <div className="selected-works-page" id="selected-works">
       <div className="selected-works-intro">
@@ -30,13 +40,22 @@ const SelectedWork = () => {
           {selectedWorksData.map((item, i) => (
             <li
               key={item.id}
-              className="selected-works-list-item selected-works-list-item-a"
+              className="selected-works-list-item"
+              onClick={() => toggle(i)}
             >
               <div className="selected-work-border-top" />
               <p className="selected-work-heading">{item.title}</p>
               <img className="image selected-works-image" src={horizon} />
               <p className="selected-work-type">{item.type}</p>
-              <p className="selected-work-description">{item.description}</p>
+              <p
+                className={
+                  selected === i
+                    ? `selected-work-description show`
+                    : `selected-work-description hidden`
+                }
+              >
+                {item.description}
+              </p>
               <p className="selected-work-date">{item.date}</p>
             </li>
           ))}
