@@ -1,4 +1,5 @@
 import "./SelectedWork.css";
+import selectedWorksData from "../assets/data/SelectedWorksData";
 import horizon from "../assets/images/horizon.jpg";
 
 const SelectedWork = () => {
@@ -25,7 +26,22 @@ const SelectedWork = () => {
             <h3>DATE</h3>
           </li>
         </ul>
-        <ul className="selected-works-list">
+        <ul>
+          {selectedWorksData.map((item, i) => (
+            <li
+              key={item.id}
+              className="selected-works-list-item selected-works-list-item-a"
+            >
+              <div className="selected-work-border-top" />
+              <p className="selected-work-heading">{item.title}</p>
+              <img className="image selected-works-image" src={horizon} />
+              <p className="selected-work-type">{item.type}</p>
+              <p className="selected-work-date">{item.description}</p>
+              <p className="selected-work-date">{item.date}</p>
+            </li>
+          ))}
+        </ul>
+        {/* <ul className="selected-works-list">
           <li className="selected-works-list-item selected-works-list-item-a">
             <div className="selected-work-border-top" />
             <p className="selected-work-heading">TEA PROMO VIDEO</p>
@@ -88,7 +104,7 @@ const SelectedWork = () => {
             <p className="selected-work-date">04.07.21</p>
             <div className="selected-work-border-bottom" />
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );
