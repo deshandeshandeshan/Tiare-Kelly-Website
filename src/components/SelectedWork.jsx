@@ -45,7 +45,14 @@ const SelectedWork = () => {
             >
               <div className="selected-work-border-top" />
               <p className="selected-work-heading">{item.title}</p>
-              <img className="image selected-works-image" src={horizon} />
+              <img
+                className={
+                  selected === i
+                    ? `image selected-works-image open`
+                    : `image selected-works-image closed`
+                }
+                src={horizon}
+              />
               <p className="selected-work-type">{item.type}</p>
               <p
                 className={
