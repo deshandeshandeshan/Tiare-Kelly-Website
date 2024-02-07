@@ -45,14 +45,23 @@ const SelectedWork = () => {
             >
               <div className="selected-work-border-top" />
               <p className="selected-work-heading">{item.title}</p>
-              <img
+              <iframe
+                className={
+                  selected === i
+                    ? `selected-works-video open`
+                    : `selected-works-video closed`
+                }
+                src="https://player.vimeo.com/video/352165565?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                allow="autoplay; fullscreen; picture-in-picture"
+              ></iframe>
+              {/* <img
                 className={
                   selected === i
                     ? `image selected-works-image open`
                     : `image selected-works-image closed`
                 }
                 src={horizon}
-              />
+              /> */}
               <p className="selected-work-type">{item.type}</p>
               <p
                 className={
