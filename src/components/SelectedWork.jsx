@@ -1,7 +1,19 @@
 import "./SelectedWork.css";
+import selectedWorksData from "../assets/data/SelectedWorksData";
 import horizon from "../assets/images/horizon.jpg";
+import { useState } from "react";
+import ReactPlayer from "react-player";
 
 const SelectedWork = () => {
+  const [selected, setSelected] = useState(null);
+
+  const toggle = (i) => {
+    if (selected === i) {
+      return setSelected(null);
+    }
+    setSelected(i);
+  };
+
   return (
     <div className="selected-works-page" id="selected-works">
       <div className="selected-works-intro">
@@ -25,69 +37,51 @@ const SelectedWork = () => {
             <h3>DATE</h3>
           </li>
         </ul>
-        <ul className="selected-works-list">
-          <li className="selected-works-list-item selected-works-list-item-a">
-            <div className="selected-work-border-top" />
-            <p className="selected-work-heading">TEA PROMO VIDEO</p>
-            <img className="image selected-works-image" src={horizon} />
-            <p className="selected-work-type">COMPOSITION & ARRANGEMENT</p>
-            <p className="selected-work-date">20.02.22</p>
-          </li>
-          <li className="selected-works-list-item selected-works-list-item-b">
-            <div className="selected-work-border-top" />
-            <p className="selected-work-heading">COMP</p>
-            <img className="image selected-works-image" src={horizon} />
-            <p className="selected-work-type">COMPOSITION & ARRANGEMENT</p>
-            <p className="selected-work-date">15.11.22</p>
-          </li>
-          <li className="selected-works-list-item selected-works-list-item-c">
-            <div className="selected-work-border-top" />
-            <p className="selected-work-heading">ENSEMBLE</p>
-            <img className="image selected-works-image" src={horizon} />
-            <p className="selected-work-type">COMPOSITION & ARRANGEMENT</p>
-            <p className="selected-work-date">06.04.21</p>
-          </li>
-          <li className="selected-works-list-item selected-works-list-item-d">
-            <div className="selected-work-border-top" />
-            <p className="selected-work-heading">
-              SHE:
-              <br />A SPACE FOR WOMXN
-            </p>
-            <img className="image selected-works-image" src={horizon} />
-            <p className="selected-work-type">CURATION</p>
-            <p className="selected-work-date">04.10.21</p>
-          </li>
-          <li className="selected-works-list-item selected-works-list-item-e">
-            <div className="selected-work-border-top" />
-            <p className="selected-work-heading">BENEE TOUR</p>
-            <img className="image selected-works-image" src={horizon} />
-            <p className="selected-work-type">
-              LIVE PERFORMANCES & TOUR: LEAD GUITAR
-            </p>
-            <p className="selected-work-date">
-              20.01.18 - <br />
-              17.09.23
-            </p>
-          </li>
-          <li className="selected-works-list-item selected-works-list-item-f">
-            <div className="selected-work-border-top" />
-            <p className="selected-work-heading">
-              BALLSY:
-              <br />
-              SHORT FILM
-            </p>
-            <img className="image selected-works-image" src={horizon} />
-            <p className="selected-work-type">COMPOSITION & ARRANGEMENT</p>
-            <p className="selected-work-date">21.09.23</p>
-          </li>
-          <li className="selected-works-list-item selected-works-list-item-g">
-            <div className="selected-work-border-top" />
-            <p className="selected-work-heading">TEA PROMO VIDEO</p>
-            <img className="image selected-works-image" src={horizon} />
-            <p className="selected-work-type">COMPOSITION & ARRANGEMENT</p>
-            <p className="selected-work-date">04.07.21</p>
-            <div className="selected-work-border-bottom" />
-          </li>
+        <ul>
+          {selectedWorksData.map((item, i) => (
+            <li
+              key={item.id}
+              className="selected-works-list-item"
+              onClick={() => toggle(i)}
+            >
+              <div className="selected-work-border-top" />
+              <p className="selected-work-heading">{item.title}</p>
+              <div className="video-wrapper">
+                <iframe
+                  className={
+                    selected === i
+                      ? `selected-works-video open`
+                      : `selected-works-video closed`
+                  }
+                  src={
+                    selected === i
+                      ? `${item.selectedWork}`
+                      : `${item.selectedWork}`
+                  }
+                  allow="autoplay; fullscreen; picture-in-picture"
+                />
+              </div>
+              {/* <img
+                className={
+                  selected === i
+                    ? `image selected-works-image open`
+                    : `image selected-works-image closed`
+                }
+                src={horizon}
+              /> */}
+              <p className="selected-work-type">{item.type}</p>
+              <p
+                className={
+                  selected === i
+                    ? `selected-work-description show`
+                    : `selected-work-description hidden`
+                }
+              >
+                {item.description}
+              </p>
+              <p className="selected-work-date">{item.date}</p>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
