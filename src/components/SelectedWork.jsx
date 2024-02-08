@@ -2,6 +2,7 @@ import "./SelectedWork.css";
 import selectedWorksData from "../assets/data/SelectedWorksData";
 import horizon from "../assets/images/horizon.jpg";
 import { useState } from "react";
+import ReactPlayer from "react-player";
 
 const SelectedWork = () => {
   const [selected, setSelected] = useState(null);
@@ -45,15 +46,21 @@ const SelectedWork = () => {
             >
               <div className="selected-work-border-top" />
               <p className="selected-work-heading">{item.title}</p>
-              <iframe
-                className={
-                  selected === i
-                    ? `selected-works-video open`
-                    : `selected-works-video closed`
-                }
-                src="https://player.vimeo.com/video/352165565?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                allow="autoplay; fullscreen; picture-in-picture"
-              ></iframe>
+              <div className="video-wrapper">
+                <iframe
+                  className={
+                    selected === i
+                      ? `selected-works-video open`
+                      : `selected-works-video closed`
+                  }
+                  src={
+                    selected === i
+                      ? `${item.selectedWork}`
+                      : `${item.selectedWork}`
+                  }
+                  allow="autoplay; fullscreen; picture-in-picture"
+                />
+              </div>
               {/* <img
                 className={
                   selected === i

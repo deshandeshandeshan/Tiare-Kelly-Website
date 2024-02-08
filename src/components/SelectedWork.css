@@ -1,3 +1,7 @@
+.selected-works-list-item {
+  cursor: pointer;
+}
+
 .selected-work-description.hidden {
   max-height: 0;
   overflow: hidden;
@@ -24,22 +28,17 @@
 
 .selected-works-video.closed {
   height: 6rem;
-  width: 100%;
+  width: 15rem;
   border: none;
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .selected-works-video.open {
   height: 18rem;
-  width: 100%;
+  width: 30rem;
   border: none;
   transition: all 1s cubic-bezier(0.5, 0.1, 0.5, 0.1);
 }
-
-.selected-works-list-item {
-  cursor: pointer;
-}
-
 @media only screen and (min-width: 50rem) {
 }
 
@@ -112,13 +111,8 @@
     grid-row: 2 / 3;
   }
 
-  /* .selected-works-image {
+  .video-wrapper {
     grid-column: 3 / 6;
-    grid-row: 2 / 3;
-  } */
-
-  .selected-works-video {
-    grid-column: 3 / 8;
     grid-row: 2 / 3;
   }
 
