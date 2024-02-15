@@ -1,19 +1,8 @@
 import "./SelectedWork.css";
-import selectedWorksData from "../assets/data/SelectedWorksData";
-import horizon from "../assets/images/horizon.jpg";
-import { useState } from "react";
-import ReactPlayer from "react-player";
+// import ReactPlayer from "react-player";
+import SelectedWorksData from "./SelectedWorksData";
 
 const SelectedWork = () => {
-  const [selected, setSelected] = useState(null);
-
-  const toggle = (i) => {
-    if (selected === i) {
-      return setSelected(null);
-    }
-    setSelected(i);
-  };
-
   return (
     <div className="selected-works-page" id="selected-works">
       <div className="selected-works-intro">
@@ -37,52 +26,7 @@ const SelectedWork = () => {
             <h3>DATE</h3>
           </li>
         </ul>
-        <ul>
-          {selectedWorksData.map((item, i) => (
-            <li
-              key={item.id}
-              className="selected-works-list-item"
-              onClick={() => toggle(i)}
-            >
-              <div className="selected-work-border-top" />
-              <p className="selected-work-heading">{item.title}</p>
-              <div className="video-wrapper">
-                <iframe
-                  className={
-                    selected === i
-                      ? `selected-works-video open`
-                      : `selected-works-video closed`
-                  }
-                  src={
-                    selected === i
-                      ? `${item.selectedWork}`
-                      : `${item.selectedWork}`
-                  }
-                  allow="autoplay; fullscreen; picture-in-picture"
-                />
-              </div>
-              {/* <img
-                className={
-                  selected === i
-                    ? `image selected-works-image open`
-                    : `image selected-works-image closed`
-                }
-                src={horizon}
-              /> */}
-              <p className="selected-work-type">{item.type}</p>
-              <p
-                className={
-                  selected === i
-                    ? `selected-work-description show`
-                    : `selected-work-description hidden`
-                }
-              >
-                {item.description}
-              </p>
-              <p className="selected-work-date">{item.date}</p>
-            </li>
-          ))}
-        </ul>
+        <SelectedWorksData />
       </div>
     </div>
   );
