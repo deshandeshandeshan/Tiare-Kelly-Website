@@ -3,6 +3,7 @@ import selectedWorksData from "../assets/data/SelectedWorksData";
 import horizon from "../assets/images/horizon.jpg";
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import SelectedWorksData from "./SelectedWorksData";
 
 const SelectedWork = () => {
   const [selected, setSelected] = useState(null);
@@ -37,7 +38,8 @@ const SelectedWork = () => {
             <h3>DATE</h3>
           </li>
         </ul>
-        <ul>
+        <SelectedWorksData />
+        {/* <ul>
           {selectedWorksData.map((item, i) => (
             <li
               key={item.id}
@@ -61,14 +63,6 @@ const SelectedWork = () => {
                   allow="autoplay; fullscreen; picture-in-picture"
                 />
               </div>
-              {/* <img
-                className={
-                  selected === i
-                    ? `image selected-works-image open`
-                    : `image selected-works-image closed`
-                }
-                src={horizon}
-              /> */}
               <p className="selected-work-type">{item.type}</p>
               <p
                 className={
@@ -82,7 +76,7 @@ const SelectedWork = () => {
               <p className="selected-work-date">{item.date}</p>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </div>
   );
