@@ -1,6 +1,7 @@
 # Tiare Kelly Portfolio
 
 Project Design: Ephraim Nyahwa
+
 Project Development : Deshan Mclachlan
 
 CMS used: Sanity
