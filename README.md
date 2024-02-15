@@ -2,7 +2,7 @@
 
 Project Design: Ephraim Nyahwa
 
-Project Development : Deshan Mclachlan
+Project Development: Deshan Mclachlan
 
 CMS used: Sanity
 
