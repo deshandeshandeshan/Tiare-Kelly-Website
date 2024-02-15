@@ -1,4 +1,13 @@
-# React + Vite
+# Tiare Kelly Portfolio
+
+Project Design: Ephraim Nyahwa
+Project Development : Deshan Mclachlan
+
+CMS used: Sanity
+
+Website URL: TBC
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
