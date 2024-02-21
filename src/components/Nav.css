@@ -1,8 +1,8 @@
 .sticky-nav {
-  width: 20rem;
+  width: 90%;
   position: fixed;
-  top: 50rem;
-  left: 2rem;
+  top: 34rem;
+  left: 1rem;
   background-color: #f7f3f0;
   border: transparent 0.2rem;
   border-radius: 1.5rem;
@@ -40,4 +40,18 @@
   background-color: #32281e;
   border-radius: 1rem;
   padding: 0;
+}
+
+@media only screen and (min-width: 40rem) {
+  .sticky-nav {
+    width: 25rem;
+  }
+}
+
+@media only screen and (min-width: 70rem) {
+  .sticky-nav {
+    width: 20rem;
+    top: 50rem;
+    left: 2rem;
+  }
 }
