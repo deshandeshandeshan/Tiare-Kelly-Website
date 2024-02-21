@@ -1,3 +1,11 @@
+.selected-works-page {
+  padding: 1rem;
+}
+
+.selected-works-headings-list {
+  display: none;
+}
+
 .selected-works-list-item {
   cursor: pointer;
 }
@@ -39,10 +47,44 @@
   border: none;
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
+
+.selected-work-border-top,
+.selected-work-border-bottom {
+  display: block;
+  height: 0.05rem;
+  background-color: #542316;
+}
+
+.selected-works-intro-text {
+  padding-bottom: 2rem;
+}
+
+.selected-work-heading,
+.video-wrapper,
+.selected-work-type,
+.selected-work-date {
+  padding-top: 1rem;
+}
+
+.selected-work-description.show {
+  padding-top: 1rem;
+}
+
+.selected-work-date {
+  padding-bottom: 1rem;
+}
+
 @media only screen and (min-width: 50rem) {
+  .selected-works-headings-list {
+    display: grid;
+  }
 }
 
 @media only screen and (min-width: 70rem) {
+  .selected-work-description.show {
+    padding-top: 3rem;
+  }
+
   .selected-works-page {
     padding: 0 2rem;
   }
@@ -58,13 +100,6 @@
 
   .selected-works-list-item {
     padding-bottom: 0.5rem;
-  }
-
-  .selected-work-border-top,
-  .selected-work-border-bottom {
-    display: block;
-    height: 0.05rem;
-    background-color: #542316;
   }
 
   .selected-works-headings-list,
