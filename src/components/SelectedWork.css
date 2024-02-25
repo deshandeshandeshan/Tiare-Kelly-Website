@@ -22,28 +22,16 @@
   transition: all 1s cubic-bezier(0.5, 0.1, 0.5, 0.1);
 }
 
-/* .selected-works-image.closed {
-  height: 6rem;
-  width: auto;
-  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.selected-works-image.open {
-  height: 18rem;
-  width: auto;
-  transition: all 1s cubic-bezier(0.5, 0.1, 0.5, 0.1);
-} */
-
 .selected-works-video.closed {
-  height: 6rem;
-  width: 15rem;
+  height: 100%;
+  width: 100%;
   border: none;
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .selected-works-video.open {
-  height: 18rem;
-  width: 30rem;
+  height: 100%;
+  width: 100%;
   border: none;
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
@@ -63,7 +51,7 @@
 .video-wrapper,
 .selected-work-type,
 .selected-work-date {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .selected-work-description.show {
@@ -71,16 +59,27 @@
 }
 
 .selected-work-date {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
-@media only screen and (min-width: 50rem) {
+@media only screen and (min-width: 40rem) {
   .selected-works-headings-list {
     display: grid;
   }
 }
 
-@media only screen and (min-width: 70rem) {
+@media only screen and (min-width: 40rem) {
+  .selected-work-heading,
+  .video-wrapper,
+  .selected-work-type,
+  .selected-work-date {
+    padding-top: 0.5rem;
+  }
+
+  .selected-work-date {
+    padding-bottom: 0;
+  }
+
   .selected-work-description.show {
     padding-top: 3rem;
   }
@@ -115,10 +114,6 @@
   .selected-works-intro-text {
     grid-column: 1 / 6;
     grid-row: 2 / 3;
-  }
-
-  .selected-works-list-item {
-    row-gap: 0.5rem;
   }
 
   .headings-list-item-a {

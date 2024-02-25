@@ -71,6 +71,7 @@ const SelectedWorksData = () => {
             <p className="selected-work-date">{selectedWork.date}</p>
           </li>
         ))}
+      <div className="selected-work-border-top" />
     </ul>
   );
 };
