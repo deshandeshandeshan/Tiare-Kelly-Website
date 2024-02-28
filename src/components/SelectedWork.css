@@ -1,3 +1,11 @@
+.selected-works-page {
+  padding: 1rem;
+}
+
+.selected-works-headings-list {
+  display: none;
+}
+
 .selected-works-list-item {
   cursor: pointer;
 }
@@ -11,38 +19,183 @@
 .selected-work-description.show {
   max-height: 20rem;
   overflow: hidden;
+  padding-bottom: 1rem;
   transition: all 1s cubic-bezier(0.5, 0.1, 0.5, 0.1);
 }
-
-/* .selected-works-image.closed {
-  height: 6rem;
-  width: auto;
-  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.selected-works-image.open {
-  height: 18rem;
-  width: auto;
-  transition: all 1s cubic-bezier(0.5, 0.1, 0.5, 0.1);
-} */
 
 .selected-works-video.closed {
-  height: 6rem;
-  width: 15rem;
+  height: 100%;
+  width: 100%;
   border: none;
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .selected-works-video.open {
-  height: 18rem;
-  width: 30rem;
+  height: 100%;
+  width: 100%;
   border: none;
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
-@media only screen and (min-width: 50rem) {
+
+.selected-work-border-top,
+.selected-work-border-bottom {
+  display: block;
+  height: 0.05rem;
+  background-color: #542316;
+}
+
+.selected-works-intro-text {
+  padding-bottom: 2rem;
+}
+
+.selected-work-heading,
+.video-wrapper,
+.selected-work-type {
+  padding-top: 0.5rem;
+}
+
+.selected-work-type {
+  padding-bottom: 0.5rem;
+}
+
+.selected-work-date {
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 40rem) {
+  .selected-works-headings-list {
+    display: none;
+  }
+
+  .selected-work-heading,
+  .video-wrapper,
+  .selected-work-type,
+  .selected-work-date {
+    padding-top: 0.5rem;
+  }
+
+  .selected-work-type {
+    padding-bottom: 0;
+  }
+
+  .selected-works-video.closed {
+    height: 9rem;
+    width: 15rem;
+    border: none;
+    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  .selected-works-video.open {
+    height: 17rem;
+    width: 100%;
+    border: none;
+    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  .selected-works-headings-list {
+    padding-bottom: 1rem;
+  }
+
+  .selected-works-list-item {
+    padding-bottom: 0.5rem;
+  }
+
+  /* .selected-works-headings-list,
+  .selected-works-list,
+  .selected-works-list-item,
+  .selected-works-intro {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    column-gap: 1rem;
+  }
+
+  .selected-works-intro-text {
+    grid-column: 1 / 6;
+    grid-row: 2 / 3;
+  }
+
+  .headings-list-item-a {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .headings-list-item-b {
+    grid-column: 3 / 6;
+    grid-row: 1 / 2;
+  }
+
+  .headings-list-item-c {
+    grid-column: 9 / 12;
+    grid-row: 1 / 2;
+  }
+
+  .headings-list-item-d {
+    grid-column: 12 / 13;
+    grid-row: 1 / 2;
+  }
+
+  .selected-work-heading {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .video-wrapper {
+    grid-column: 3 / 6;
+    grid-row: 2 / 3;
+  }
+
+  .selected-work-type {
+    grid-column: 9 / 12;
+    grid-row: 2 / 3;
+  }
+
+  .selected-work-description {
+    grid-column: 9 / 12;
+    grid-row: 2 / 3;
+    padding-top: 3rem;
+  }
+
+  .selected-work-date {
+    grid-column: 12 / 13;
+    grid-row: 2 / 3;
+  }
+
+  .selected-works-list-item {
+    grid-column: 1 / 13;
+  }
+
+  .selected-work-border-top {
+    grid-column: 1 / 13;
+    grid-row: 1 / 3;
+  }
+
+  .selected-work-border-bottom {
+    grid-column: 1 / 13;
+    grid-row: 3 / 4;
+  } */
 }
 
 @media only screen and (min-width: 70rem) {
+  .selected-works-headings-list {
+    display: grid;
+  }
+
+  .selected-work-heading,
+  .video-wrapper,
+  .selected-work-type,
+  .selected-work-date {
+    padding-top: 0.5rem;
+  }
+
+  .selected-work-date {
+    padding-bottom: 0;
+  }
+
+  .selected-work-description.show {
+    padding-top: 3rem;
+  }
+
   .selected-works-page {
     padding: 0 2rem;
   }
@@ -50,21 +203,6 @@
   .selected-works-intro-text,
   .selected-works-page {
     padding-bottom: 6rem;
-  }
-
-  .selected-works-headings-list {
-    padding-bottom: 2rem;
-  }
-
-  .selected-works-list-item {
-    padding-bottom: 0.5rem;
-  }
-
-  .selected-work-border-top,
-  .selected-work-border-bottom {
-    display: block;
-    height: 0.05rem;
-    background-color: #542316;
   }
 
   .selected-works-headings-list,
@@ -80,10 +218,6 @@
   .selected-works-intro-text {
     grid-column: 1 / 6;
     grid-row: 2 / 3;
-  }
-
-  .selected-works-list-item {
-    row-gap: 0.5rem;
   }
 
   .headings-list-item-a {

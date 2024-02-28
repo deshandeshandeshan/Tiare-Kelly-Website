@@ -44,7 +44,7 @@ const SelectedWorksData = () => {
             onClick={() => toggle(i)}
           >
             <div className="selected-work-border-top" />
-            <p className="selected-work-heading">{selectedWork.title}</p>
+            <h3 className="selected-work-heading">{selectedWork.title}</h3>
             <div className="video-wrapper">
               <iframe
                 className={
@@ -71,6 +71,7 @@ const SelectedWorksData = () => {
             <p className="selected-work-date">{selectedWork.date}</p>
           </li>
         ))}
+      <div className="selected-work-border-top" />
     </ul>
   );
 };
