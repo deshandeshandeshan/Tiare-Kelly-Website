@@ -5,6 +5,7 @@
 .home-page {
   display: grid;
   padding: 1rem;
+  background-color: #e7e2d6;
 }
 
 .home-heading {
