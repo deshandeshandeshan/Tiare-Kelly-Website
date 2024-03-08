@@ -1,4 +1,5 @@
 import "./About.css";
+import tiareProfilePicture from "../assets/images/TiareProfileImage.png";
 
 const About = () => {
   return (
@@ -37,6 +38,7 @@ const About = () => {
           university and Launching the promotion space She.
         </p>
       </div>
+      <img className="about-profile-image" src={tiareProfilePicture} />
     </div>
   );
 };
