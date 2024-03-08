@@ -40,18 +40,22 @@ const SelectedWorksData = () => {
         selectedWorks.map((selectedWork, i) => (
           <li
             key={selectedWork.id}
-            className="selected-works-list-item"
+            className={
+              selected === i
+                ? `selected-works-list-item open`
+                : `selected-works-list-item closed`
+            }
             onClick={() => toggle(i)}
           >
             <div className="selected-work-border-top" />
-            <h3 className="selected-work-heading">{selectedWork.title}</h3>
-            <div className="video-wrapper">
+            <p className="selected-work-heading">{selectedWork.title}</p>
+            <div
+              className={
+                selected === i ? `video-wrapper open` : `video-wrapper closed`
+              }
+            >
               <iframe
-                className={
-                  selected === i
-                    ? `selected-works-video open`
-                    : `selected-works-video closed`
-                }
+                className="selected-works-video"
                 src={
                   selected === i ? `${selectedWork.url}` : `${selectedWork.url}`
                 }
