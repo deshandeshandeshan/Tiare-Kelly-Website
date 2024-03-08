@@ -1,5 +1,6 @@
 .about-page {
   padding: 0 1rem;
+  background-color: #e7e2d6;
 }
 
 .about-page-intro {
@@ -47,6 +48,10 @@
     line-height: 7.5rem;
   }
 
+  .about-profile-image {
+    height: 25rem;
+  }
+
   .about-page-intro {
     letter-spacing: 0.3rem;
   }
@@ -78,6 +83,11 @@
 
   .about-description {
     grid-column: 1 / 6;
+    grid-row: 2 / 3;
+  }
+
+  .about-profile-image {
+    grid-column: 9;
     grid-row: 2 / 3;
   }
 }
