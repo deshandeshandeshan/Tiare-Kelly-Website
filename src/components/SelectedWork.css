@@ -1,13 +1,43 @@
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    animation-delay: 3s;
+    transform: translateY(-30px) scale(0.9);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .selected-works-page {
   padding: 1rem;
 }
 
-.selected-works-headings-list {
+.selected-works-list-item {
+  cursor: pointer;
+}
+
+.headings-list-item-b {
   display: none;
 }
 
-.selected-works-list-item {
-  cursor: pointer;
+.selected-works-list-item.closed {
+  height: 6rem;
+  padding-bottom: 0.5rem;
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.selected-works-list-item.open {
+  height: 25rem;
+  padding-bottom: 0.5rem;
+  grid-template-rows: min-content;
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .selected-work-description.hidden {
@@ -19,20 +49,24 @@
   max-height: 20rem;
   overflow: visible;
   padding-bottom: 1rem;
+  animation: fade-down 1s;
 }
 
-.selected-works-video.closed {
+.video-wrapper.closed {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper.open {
+  max-height: 20rem;
+  overflow: visible;
+  animation: fade-down 1s;
+}
+
+.selected-works-video {
   height: 100%;
   width: 100%;
   border: none;
-  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.selected-works-video.open {
-  height: 100%;
-  width: 100%;
-  border: none;
-  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .selected-work-border-top,
@@ -202,16 +236,6 @@
 
   .selected-works-page {
     padding-bottom: 6rem;
-  }
-
-  .video-wrapper.closed {
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  .video-wrapper.open {
-    max-height: 20rem;
-    overflow: visible;
   }
 
   .selected-works-video {
