@@ -49,6 +49,17 @@ const SelectedWorksData = () => {
           >
             <div className="selected-work-border-top" />
             <p className="selected-work-heading">{selectedWork.title}</p>
+            <p className="selected-work-type">{selectedWork.type}</p>
+            <p className="selected-work-date">{selectedWork.date}</p>
+            <p
+              className={
+                selected === i
+                  ? `selected-work-description show`
+                  : `selected-work-description hidden`
+              }
+            >
+              {selectedWork.description}
+            </p>
             <div
               className={
                 selected === i ? `video-wrapper open` : `video-wrapper closed`
@@ -62,17 +73,6 @@ const SelectedWorksData = () => {
                 allow="autoplay; fullscreen; picture-in-picture"
               />
             </div>
-            <p className="selected-work-type">{selectedWork.type}</p>
-            <p
-              className={
-                selected === i
-                  ? `selected-work-description show`
-                  : `selected-work-description hidden`
-              }
-            >
-              {selectedWork.description}
-            </p>
-            <p className="selected-work-date">{selectedWork.date}</p>
           </li>
         ))}
       <div className="selected-work-border-top" />
