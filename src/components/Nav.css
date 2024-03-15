@@ -1,21 +1,25 @@
 .sticky-nav {
-  width: 90%;
   position: fixed;
   bottom: 1rem;
   left: 1rem;
-  background-color: #f7f3f0;
-  border: transparent 0.2rem;
-  border-radius: 1.5rem;
-  filter: drop-shadow(0 0.3rem 0.15rem grey);
+}
+
+.nav-list-item {
+  border: solid 0.17rem;
+  margin-right: 0.5rem;
+  border-color: #32281e;
+  background-color: #f1f2ec;
+}
+
+.nav-list-link {
+  display: block;
+  width: 100%;
+  padding: 0.2rem 0;
 }
 
 .nav-grid {
   display: grid;
   grid-template-columns: auto repeat(3, auto);
-}
-
-.nav-list {
-  padding: 0.5rem;
 }
 
 .nav-list-item {
@@ -31,15 +35,10 @@
   display: flex;
   justify-content: center;
   background-color: #32281e;
-  border-radius: 1rem;
 }
 
-.icon-center {
-  display: inline-flex;
-  justify-content: center;
-  background-color: #32281e;
-  border-radius: 1rem;
-  padding: 0;
+.nav-list-icon {
+  height: 1.25rem;
 }
 
 @media only screen and (min-width: 40rem) {
@@ -50,7 +49,7 @@
 
 @media only screen and (min-width: 70rem) {
   .sticky-nav {
-    width: 20rem;
+    width: 15rem;
     bottom: 2rem;
     left: 2rem;
   }
