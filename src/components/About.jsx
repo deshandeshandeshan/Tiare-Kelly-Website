@@ -1,5 +1,5 @@
 import "./About.css";
-import tiareProfilePicture from "../assets/images/TiareProfileImage.png";
+import tiareProfilePicture from "../assets/images/about-image.png";
 
 const About = () => {
   return (

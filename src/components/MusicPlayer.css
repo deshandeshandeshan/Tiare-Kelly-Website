@@ -6,7 +6,10 @@
 
 .audio-player {
   position: fixed;
-  width: 100%;
+  width: 98%;
+  border: solid 0.15rem;
+  border-color: #542316;
+  background-color: #f7f3f0;
 }
 
 .progress-bar {
@@ -75,7 +78,8 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     column-gap: 1rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
+    margin: 2rem 1%;
   }
 
   .song-name,

@@ -7,7 +7,7 @@
 .nav-list-item {
   border: solid 0.17rem;
   margin-right: 0.5rem;
-  border-color: #32281e;
+  border-color: #542316;
   background-color: #f1f2ec;
 }
 
@@ -27,14 +27,14 @@
 }
 
 .nav-list-color {
-  color: #32281e;
+  color: #542316;
 }
 
 .active {
   color: #f7f3f0;
   display: flex;
   justify-content: center;
-  background-color: #32281e;
+  background-color: #542316;
 }
 
 .nav-list-icon {
