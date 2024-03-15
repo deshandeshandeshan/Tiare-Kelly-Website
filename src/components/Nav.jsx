@@ -1,6 +1,5 @@
 import "./Nav.css";
 import { Link } from "react-scroll";
-import { GoDotFill } from "react-icons/go";
 
 const Nav = () => {
   return (
@@ -8,7 +7,7 @@ const Nav = () => {
       <ul className="nav-list nav-grid">
         <li className="nav-list-item">
           <Link
-            className="nav-list-color icon-center"
+            className="nav-list-link nav-list-color"
             activeClass="active"
             spy={true}
             to="home"
@@ -16,12 +15,12 @@ const Nav = () => {
             offset={0}
             duration={1200}
           >
-            <GoDotFill />
+            <div className="nav-list-icon" />
           </Link>
         </li>
         <li className="nav-list-item">
           <Link
-            className="nav-list-color"
+            className="nav-list-link nav-list-color"
             activeClass="active"
             spy={true}
             to="selected-works"
@@ -34,7 +33,7 @@ const Nav = () => {
         </li>
         <li className="nav-list-item">
           <Link
-            className="nav-list-color"
+            className="nav-list-link nav-list-color"
             activeClass="active"
             spy={true}
             to="about"
@@ -45,7 +44,7 @@ const Nav = () => {
             ABOUT
           </Link>
         </li>
-        <li className="nav-list-item">
+        {/* <li className="nav-list-item">
           <Link
             className="nav-list-color"
             activeClass="active"
@@ -57,7 +56,7 @@ const Nav = () => {
           >
             EXTRAS
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

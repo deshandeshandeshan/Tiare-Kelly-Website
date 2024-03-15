@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home">
       <div className="home-page home-main-grid" id="home">
         <h1 className="home-heading">Tiare Kelly</h1>
-        <div className="contact-details">
+        {/* <div className="contact-details">
           <ul className="contact-details-list">
             <li className="contact-details-list-item">
               <p>Contact</p>
@@ -20,11 +20,11 @@ const Home = () => {
               <p>tiarekelly@gmail.com</p>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
       <SelectedWorks />
       <About />
-      <Extras />
+      {/* <Extras /> */}
     </div>
   );
 };
