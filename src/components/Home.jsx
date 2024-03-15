@@ -2,12 +2,13 @@ import "./Home.css";
 import SelectedWorks from "./SelectedWork";
 import About from "./About";
 import Extras from "./Extras";
+import websiteTitle from "../assets/images/title.png";
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="home-page home-main-grid" id="home">
-        <h1 className="home-heading">Tiare Kelly</h1>
+      <div className="home-page" id="home">
+        <img src={websiteTitle} className="home-title" />
         {/* <div className="contact-details">
           <ul className="contact-details-list">
             <li className="contact-details-list-item">
