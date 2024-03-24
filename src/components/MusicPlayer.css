@@ -33,7 +33,6 @@
 
   width: 100%;
   height: 0.3rem;
-  outline: solid 0.1rem #f7f3f0;
   cursor: pointer;
 }
 
@@ -82,6 +81,11 @@
     margin: 2rem 1%;
   }
 
+  .audio-progress-bar {
+    display: flex;
+    align-items: center;
+  }
+
   .song-name,
   .audio-time-before-after {
     font-size: 0.7rem;
@@ -92,6 +96,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .audio-button {
+    display: flex;
+    align-items: center;
   }
 
   .audio-time-before-after {

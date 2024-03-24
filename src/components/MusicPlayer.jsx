@@ -110,16 +110,16 @@ const MusicPlayer = () => {
           </small>
           <div className="audio-control-buttons">
             <button className="audio-button prev-song" onClick={prevSong}>
-              <MdSkipPrevious />
+              <MdSkipPrevious size={20} />
             </button>
             <button
               onClick={togglePlayPause}
               className="audio-button toggle-play-pause"
             >
-              {isPlaying ? <MdPause /> : <MdPlayArrow />}
+              {isPlaying ? <MdPause size={20} /> : <MdPlayArrow size={20} />}
             </button>
             <button className="audio-button next-song" onClick={nextSong}>
-              <MdSkipNext />
+              <MdSkipNext size={20} />
             </button>
           </div>
         </div>
