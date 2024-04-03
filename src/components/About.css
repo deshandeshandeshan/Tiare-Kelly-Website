@@ -2,6 +2,10 @@
   padding: 0 1rem;
 }
 
+.email-link {
+  text-decoration: underline;
+}
+
 .about-page-intro {
   padding-bottom: 2rem;
 }
@@ -24,6 +28,14 @@
 
 .heading-italic {
   font-family: "Pinyon Script", cursive;
+}
+
+.about-padding-bottom {
+  padding-bottom: 1rem;
+}
+
+.links-list-item {
+  padding-bottom: 0.5rem;
 }
 
 @media only screen and (min-width: 40rem) {

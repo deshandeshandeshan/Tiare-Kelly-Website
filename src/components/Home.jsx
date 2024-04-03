@@ -1,7 +1,7 @@
 import "./Home.css";
 import SelectedWorks from "./SelectedWork";
 import About from "./About";
-import Extras from "./Extras";
+// import Extras from "./Extras";
 import websiteTitle from "../assets/images/title.png";
 
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
     <div className="home">
       <div className="home-page" id="home">
         <img src={websiteTitle} className="home-title" />
+
         {/* <div className="contact-details">
           <ul className="contact-details-list">
             <li className="contact-details-list-item">
@@ -23,6 +24,7 @@ const Home = () => {
           </ul>
         </div> */}
       </div>
+      <h3 className="sub-heading-text">Composer, Musician and Artist</h3>
       <SelectedWorks />
       <About />
       {/* <Extras /> */}
