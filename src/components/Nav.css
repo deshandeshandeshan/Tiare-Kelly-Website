@@ -5,10 +5,15 @@
 }
 
 .nav-list-item {
-  border: solid 0.17rem;
+  border: solid 0.05rem;
   margin-right: 0.5rem;
   border-color: #542316;
   background-color: #f1f2ec;
+}
+
+.nav-list-item:hover {
+  background-color: #e4dcda;
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .nav-list-link {
@@ -35,6 +40,7 @@
   display: flex;
   justify-content: center;
   background-color: #542316;
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .nav-list-icon {
