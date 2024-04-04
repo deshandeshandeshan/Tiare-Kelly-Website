@@ -8,6 +8,7 @@ const About = () => {
         <span className="heading-italic">Tiare Kelly</span> is a Composer,
         Musician & Artist based in Tamaki Makaurau (Auckland)
       </h2>
+      <img className="about-profile-image" src={tiareProfilePicture} />
       <div className="about-description">
         <p className="about-description-paragraph about-paragraph-1">
           Raised in Auckland city, New Zealand, Tiare Kelly began her career as
@@ -59,7 +60,6 @@ const About = () => {
           </li>
         </ul>
       </div>
-      <img className="about-profile-image" src={tiareProfilePicture} />
     </div>
   );
 };

@@ -38,6 +38,11 @@
   padding-bottom: 0.5rem;
 }
 
+.about-profile-image {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
 @media only screen and (min-width: 40rem) {
   .about-page {
     padding: 0 2rem;
@@ -51,16 +56,35 @@
   .about-page-intro {
     letter-spacing: 0.2rem;
   }
+
+  .about-page {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+
+  .about-page-intro {
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+  }
+
+  .about-description {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+  }
+
+  .about-profile-image {
+    grid-column: 5 / 9;
+    grid-row: 2 / 3;
+  }
 }
 
 @media only screen and (min-width: 70rem) {
   .about-page-intro {
     font-size: 8rem;
     line-height: 7.5rem;
-  }
-
-  .about-profile-image {
-    height: 25rem;
   }
 
   .about-page-intro {
@@ -80,11 +104,7 @@
   }
 
   .about-page {
-    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-    padding: 0 2rem;
   }
 
   .about-page-intro {
@@ -98,7 +118,7 @@
   }
 
   .about-profile-image {
-    grid-column: 9;
+    grid-column: 7 / 12;
     grid-row: 2 / 3;
   }
 }
