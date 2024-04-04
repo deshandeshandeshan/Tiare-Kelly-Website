@@ -134,6 +134,7 @@
 
   .audio-player {
     grid-template-columns: repeat(8, 1fr);
+    margin: 2rem 1%;
   }
 
   .audio-progress-bar {
