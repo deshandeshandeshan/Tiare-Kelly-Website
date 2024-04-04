@@ -84,7 +84,7 @@ const MusicPlayer = () => {
     if (isNaN(duration)) {
       return "0:00";
     } else {
-      return `${returnedMinutes} : ${returnedSeconds}`;
+      return `${returnedMinutes}:${returnedSeconds}`;
     }
   };
 
@@ -106,7 +106,7 @@ const MusicPlayer = () => {
         </div>
         <div className="audio-controls">
           <small className="audio-time-before-after">
-            {calculateTime(currentTime)} /{calculateTime(duration)}
+            {calculateTime(currentTime)} / {calculateTime(duration)}
           </small>
           <div className="audio-control-buttons">
             <button className="audio-button prev-song" onClick={prevSong}>
