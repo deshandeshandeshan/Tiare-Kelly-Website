@@ -2,7 +2,7 @@ import "./Home.css";
 import SelectedWorks from "./SelectedWork";
 import About from "./About";
 // import Extras from "./Extras";
-import websiteTitle from "../assets/images/title.png";
+import websiteTitle from "../assets/images/Group 48.png";
 
 const Home = () => {
   return (
