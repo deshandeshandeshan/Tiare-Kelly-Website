@@ -1,13 +1,59 @@
-.selected-works-page {
-  padding: 1rem;
-}
-
 .selected-works-list-item {
   cursor: pointer;
 }
 
-.selected-works-page {
-  padding-bottom: 6rem;
+.slider {
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.selected-work-image {
+  width: 100vw;
+  height: 100vh;
+  flex: 1 0 100%;
+  object-fit: cover;
+}
+
+.project-overlay-text,
+.image-slider-left-arrow,
+.image-slider-right-arrow {
+  position: absolute;
+  z-index: 1;
+}
+
+.project-overlay-text {
+  top: 4rem;
+  left: 4rem;
+}
+
+.overlay-text-colour {
+  color: white;
+}
+
+.image-slider-left-arrow,
+.image-slider-right-arrow {
+  border: 0.2rem solid;
+  border-radius: 1.5rem;
+  background-color: white;
+  border-color: white;
+}
+
+.image-slider-left-arrow {
+  left: 4rem;
+  bottom: 50%;
+}
+
+.image-slider-right-arrow {
+  right: 4rem;
+  bottom: 50%;
 }
 
 @media only screen and (min-width: 40rem) {

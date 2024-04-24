@@ -4,11 +4,9 @@ import SelectedWorksData from "./SelectedWorksData";
 
 const SelectedWork = () => {
   return (
-    <div className="selected-works-page" id="selected-works">
-      <div className="selected-works">
-        <SelectedWorksData />
-      </div>
-    </div>
+    <section className="selected-works-page" id="selected-works">
+      <SelectedWorksData />
+    </section>
   );
 };
 

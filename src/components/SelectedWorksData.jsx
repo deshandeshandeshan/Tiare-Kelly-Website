@@ -25,24 +25,33 @@ const SelectedWorksData = () => {
   console.log(selectedWorks);
 
   return (
-    <ul>
-      {selectedWorks &&
-        selectedWorks.map((selectedWork, i) => (
-          <li
-            key={`selectedWork_${i}`}
-            className="selected-works-list-item open"
-          >
-            <p className="selected-work-heading">{selectedWork.title}</p>
-            <p className="selected-work-type">{selectedWork.type}</p>
-            <img
-              src={selectedWork.image.asset.url}
-              className="selected-work-date"
-            />
-            <FaAngleLeft className="image-slider-left-arrow" />
-            <FaAngleRight className="image-slider-right-arrow" />
-          </li>
-        ))}
-    </ul>
+    <div className="slider-wrapper">
+      <ul className="slider">
+        {selectedWorks &&
+          selectedWorks.map((selectedWork, i) => (
+            <li
+              key={`selectedWork_${i}`}
+              className="selected-works-list-item open slide"
+            >
+              <div className="project-overlay-text">
+                <p className="selected-work-heading overlay-text-colour">
+                  {selectedWork.title}
+                </p>
+
+                <p className="selected-work-type overlay-text-colour">
+                  {selectedWork.type}
+                </p>
+              </div>
+              <img
+                src={selectedWork.image.asset.url}
+                className={`selected-work-image slide-${i}`}
+              />
+              <FaAngleLeft size="42" className="image-slider-left-arrow" />
+              <FaAngleRight size="42" className="image-slider-right-arrow" />
+            </li>
+          ))}
+      </ul>
+    </div>
   );
 };
 
