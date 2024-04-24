@@ -84,42 +84,44 @@ const MusicPlayer = () => {
     if (isNaN(duration)) {
       return "0:00";
     } else {
-      return `${returnedMinutes} : ${returnedSeconds}`;
+      return `${returnedMinutes}:${returnedSeconds}`;
     }
   };
 
   return (
-    <div className="audio-player">
-      <audio ref={audioPlayer} autoPlay src={currentSong.url} />
-      <div className="song-name">
-        <h3>{currentSong.title}</h3>
-      </div>
-      <div className="audio-progress-bar">
-        <input
-          type="range"
-          defaultValue="0"
-          ref={progressBar}
-          onChange={changeRange}
-          className="progress-bar"
-        />
-      </div>
-      <div className="audio-controls">
-        <small className="audio-time-before-after">
-          {calculateTime(currentTime)} /{calculateTime(duration)}
-        </small>
-        <div className="audio-control-buttons">
-          <button className="audio-button prev-song" onClick={prevSong}>
-            <MdSkipPrevious />
-          </button>
-          <button
-            onClick={togglePlayPause}
-            className="audio-button toggle-play-pause"
-          >
-            {isPlaying ? <MdPause /> : <MdPlayArrow />}
-          </button>
-          <button className="audio-button next-song" onClick={nextSong}>
-            <MdSkipNext />
-          </button>
+    <div className="audio-player-container">
+      <div className="audio-player">
+        <audio ref={audioPlayer} autoPlay src={currentSong.url} />
+        <div className="song-name">
+          <h3>{currentSong.title}</h3>
+        </div>
+        <div className="audio-progress-bar">
+          <input
+            type="range"
+            defaultValue="0"
+            ref={progressBar}
+            onChange={changeRange}
+            className="progress-bar"
+          />
+        </div>
+        <div className="audio-controls">
+          <small className="audio-time-before-after">
+            {calculateTime(currentTime)} / {calculateTime(duration)}
+          </small>
+          <div className="audio-control-buttons">
+            <button className="audio-button prev-song" onClick={prevSong}>
+              <MdSkipPrevious size={20} />
+            </button>
+            <button
+              onClick={togglePlayPause}
+              className="audio-button toggle-play-pause"
+            >
+              {isPlaying ? <MdPause size={20} /> : <MdPlayArrow size={20} />}
+            </button>
+            <button className="audio-button next-song" onClick={nextSong}>
+              <MdSkipNext size={20} />
+            </button>
+          </div>
         </div>
       </div>
     </div>

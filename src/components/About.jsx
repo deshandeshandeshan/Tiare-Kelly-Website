@@ -1,5 +1,5 @@
 import "./About.css";
-import tiareProfilePicture from "../assets/images/TiareProfileImage.png";
+import tiareProfilePicture from "../assets/images/about-image.png";
 
 const About = () => {
   return (
@@ -8,6 +8,7 @@ const About = () => {
         <span className="heading-italic">Tiare Kelly</span> is a Composer,
         Musician & Artist based in Tamaki Makaurau (Auckland)
       </h2>
+      <img className="about-profile-image" src={tiareProfilePicture} />
       <div className="about-description">
         <p className="about-description-paragraph about-paragraph-1">
           Raised in Auckland city, New Zealand, Tiare Kelly began her career as
@@ -37,8 +38,28 @@ const About = () => {
           and holding gigs at local wellington venues, inside and outside
           university and Launching the promotion space She.
         </p>
+        <h2 className="about-padding-bottom">
+          For any enquiries please{" "}
+          <a className="email-link" href="mailto:exampleemail@gmail.com">
+            reach out!
+          </a>
+        </h2>
+        <h2 className="about-padding-bottom">Links:</h2>
+        <ul className="links-list">
+          <li className="links-list-item">
+            <a className="list-link">Soundcloud</a>
+          </li>
+          <li className="links-list-item">
+            <a className="list-link">Bootcamp</a>
+          </li>
+          <li className="links-list-item">
+            <a className="list-link">Instagram</a>
+          </li>
+          <li className="links-list-item">
+            <a className="list-link">YouTube</a>
+          </li>
+        </ul>
       </div>
-      <img className="about-profile-image" src={tiareProfilePicture} />
     </div>
   );
 };

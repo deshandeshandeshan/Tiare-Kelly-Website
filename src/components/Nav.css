@@ -1,20 +1,32 @@
 .sticky-nav {
   position: fixed;
-  bottom: 1rem;
-  left: 1rem;
+  width: 15rem;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .nav-list-item {
-  border: solid 0.17rem;
+  border: solid 0.05rem;
+  border-radius: 1.5rem;
   margin-right: 0.5rem;
-  border-color: #32281e;
+  border-color: #542316;
   background-color: #f1f2ec;
+}
+
+.nav-list-item:hover {
+  background-color: #e4dcda;
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .nav-list-link {
   display: block;
+  padding: 0.5rem 0.5rem;
   width: 100%;
-  padding: 0.2rem 0;
+}
+
+.nav-list-home {
+  padding: 0.5rem 0.8rem;
 }
 
 .nav-grid {
@@ -27,14 +39,16 @@
 }
 
 .nav-list-color {
-  color: #32281e;
+  color: #542316;
 }
 
 .active {
   color: #f7f3f0;
   display: flex;
   justify-content: center;
-  background-color: #32281e;
+  background-color: #542316;
+  border-radius: 1.5rem;
+  transition: background-color 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .nav-list-icon {
@@ -43,14 +57,12 @@
 
 @media only screen and (min-width: 40rem) {
   .sticky-nav {
-    width: 25rem;
+    width: 15rem;
+    bottom: 2rem;
+    left: 2rem;
+    transform: none;
   }
 }
 
 @media only screen and (min-width: 70rem) {
-  .sticky-nav {
-    width: 15rem;
-    bottom: 2rem;
-    left: 2rem;
-  }
 }

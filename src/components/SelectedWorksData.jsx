@@ -1,81 +1,62 @@
 import { useState, useEffect } from "react";
 import sanityClient from "../client";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 // import ReactPlayer from "react-player";
 
 const SelectedWorksData = () => {
   const [selectedWorks, setSelectedWorks] = useState(null);
-  const [selected, setSelected] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const toggle = (i) => {
-    if (selected === i) {
-      return setSelected(null);
-    }
-    setSelected(i);
+  const goToPrev = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? selectedWorks.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const isLastSlide = currentIndex === selectedWorks.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
   };
 
   useEffect(() => {
-    const fetchData = () => {
-      sanityClient
+    async () => {
+      await sanityClient
         .fetch(
           `*[_type == "selectedWorks"]{
         title,
-        url,
         type,
-        description,
-        date
+        image {
+          asset -> {
+            url
+          }
+        }
       }`
         )
         .then((data) => setSelectedWorks(data))
         .catch(console.error);
     };
-
-    fetchData();
   }, []);
 
   console.log(selectedWorks);
 
   return (
     <ul>
-      {selectedWorks &&
-        selectedWorks.map((selectedWork, i) => (
-          <li
-            key={selectedWork.id}
-            className={
-              selected === i
-                ? `selected-works-list-item open`
-                : `selected-works-list-item closed`
-            }
-            onClick={() => toggle(i)}
-          >
-            <div className="selected-work-border-top" />
-            <p className="selected-work-heading">{selectedWork.title}</p>
-            <p className="selected-work-type">{selectedWork.type}</p>
-            <p className="selected-work-date">{selectedWork.date}</p>
-            <p
-              className={
-                selected === i
-                  ? `selected-work-description show`
-                  : `selected-work-description hidden`
-              }
-            >
-              {selectedWork.description}
-            </p>
-            <div
-              className={
-                selected === i ? `video-wrapper open` : `video-wrapper closed`
-              }
-            >
-              <iframe
-                className="selected-works-video"
-                src={
-                  selected === i ? `${selectedWork.url}` : `${selectedWork.url}`
-                }
-                allow="autoplay; fullscreen; picture-in-picture"
-              />
-            </div>
-          </li>
-        ))}
-      <div className="selected-work-border-top" />
+      <li
+        key={selectedWorks[currentIndex].id}
+        className="selected-works-list-item open"
+      >
+        <p className="selected-work-heading">
+          {selectedWorks[currentIndex].title}
+        </p>
+        <p className="selected-work-type">{selectedWorks[currentIndex].type}</p>
+        <img
+          src={selectedWorks[currentIndex].image.asset.url}
+          className="selected-work-date"
+        />
+        <FaAngleLeft onClick={goToPrev} className="image-slider-left-arrow" />
+        <FaAngleRight onClick={goToNext} className="image-slider-right-arrow" />
+      </li>
     </ul>
   );
 };
