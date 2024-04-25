@@ -1,7 +1,9 @@
 import "./SelectedWorks.css";
-import { useState, useEffect } from "react";
+// import SelectedWorksCarousel from "./SelectedWorksCarousel";
 import sanityClient from "../client";
+import { useState, useEffect } from "react";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SelectedWorks = () => {
   const [selectedWorks, setSelectedWorks] = useState(null);
@@ -23,14 +25,14 @@ const SelectedWorks = () => {
     sanityClient
       .fetch(
         `*[_type == "selectedWorks"]{
-          title,
-          type,
-          image {
-            asset -> {
-              url
+            title,
+            type,
+            image {
+              asset -> {
+                url
+              }
             }
-          }
-        }`
+          }`
       )
       .then((data) => setSelectedWorks(data))
       .catch(console.error);
@@ -40,37 +42,44 @@ const SelectedWorks = () => {
     <section className="selected-works-page slider-wrapper" id="selected-works">
       <ul className="slider">
         {selectedWorks &&
-          selectedWorks.map((selectedWork, i) => (
-            <li
-              key={`selectedWork_${i}`}
-              className="selected-works-list-item open slide"
-              style={{ transform: `translateX(-${currentProject * 100}%)` }}
-            >
-              <div className="project-overlay-text">
-                <p className="selected-work-heading overlay-text-colour">
-                  {selectedWork.title}
-                </p>
+          selectedWorks.map((selectedWork, index) => {
+            return (
+              <li
+                key={`selectedWork_${index}`}
+                className="selected-works-list-item open slide"
+                style={{ transform: `translateX(-${currentProject * 100}%)` }}
+              >
+                <div className="project-overlay-text">
+                  <p className="selected-work-heading overlay-text-colour">
+                    {selectedWork.title}
+                  </p>
 
-                <p className="selected-work-type overlay-text-colour">
-                  {selectedWork.type}
-                </p>
-              </div>
-              <img
-                src={selectedWork.image.asset.url}
-                className={`selected-work-image slide-${i}`}
-              />
-              <FaAngleLeft
-                size="42"
-                onClick={prev}
-                className="image-slider-left-arrow"
-              />
-              <FaAngleRight
-                size="42"
-                onClick={next}
-                className="image-slider-right-arrow"
-              />
-            </li>
-          ))}
+                  <p className="selected-work-type overlay-text-colour">
+                    {selectedWork.type}
+                  </p>
+                </div>
+                <Link
+                  to={`/${selectedWork.title}`}
+                  className="project-link project-padding icon-center"
+                >
+                  <img
+                    src={selectedWork.image.asset.url}
+                    className={`selected-work-image slide-${index}`}
+                  />
+                </Link>
+                <FaAngleLeft
+                  size="42"
+                  onClick={prev}
+                  className="image-slider-left-arrow"
+                />
+                <FaAngleRight
+                  size="42"
+                  onClick={next}
+                  className="image-slider-right-arrow"
+                />
+              </li>
+            );
+          })}
       </ul>
     </section>
   );
