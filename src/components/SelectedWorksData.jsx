@@ -4,6 +4,19 @@ import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
 const SelectedWorksData = () => {
   const [selectedWorks, setSelectedWorks] = useState(null);
+  const [currentProject, setCurrentProject] = useState(0);
+
+  const prev = () => {
+    setCurrentProject((current) =>
+      current === 0 ? selectedWorks.length - 1 : current - 1
+    );
+  };
+
+  const next = () => {
+    setCurrentProject((current) =>
+      current === selectedWorks.length - 1 ? 0 : current + 1
+    );
+  };
 
   useEffect(() => {
     sanityClient
@@ -22,8 +35,6 @@ const SelectedWorksData = () => {
       .catch(console.error);
   }, []);
 
-  console.log(selectedWorks);
-
   return (
     <div className="slider-wrapper">
       <ul className="slider">
@@ -32,6 +43,7 @@ const SelectedWorksData = () => {
             <li
               key={`selectedWork_${i}`}
               className="selected-works-list-item open slide"
+              style={{ transform: `translateX(-${currentProject * 100}%)` }}
             >
               <div className="project-overlay-text">
                 <p className="selected-work-heading overlay-text-colour">
@@ -46,8 +58,16 @@ const SelectedWorksData = () => {
                 src={selectedWork.image.asset.url}
                 className={`selected-work-image slide-${i}`}
               />
-              <FaAngleLeft size="42" className="image-slider-left-arrow" />
-              <FaAngleRight size="42" className="image-slider-right-arrow" />
+              <FaAngleLeft
+                size="42"
+                onClick={prev}
+                className="image-slider-left-arrow"
+              />
+              <FaAngleRight
+                size="42"
+                onClick={next}
+                className="image-slider-right-arrow"
+              />
             </li>
           ))}
       </ul>
