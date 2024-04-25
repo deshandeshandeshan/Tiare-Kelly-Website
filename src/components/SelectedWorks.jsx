@@ -1,8 +1,9 @@
+import "./SelectedWorks.css";
 import { useState, useEffect } from "react";
 import sanityClient from "../client";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
-const SelectedWorksData = () => {
+const SelectedWorks = () => {
   const [selectedWorks, setSelectedWorks] = useState(null);
   const [currentProject, setCurrentProject] = useState(0);
 
@@ -22,21 +23,21 @@ const SelectedWorksData = () => {
     sanityClient
       .fetch(
         `*[_type == "selectedWorks"]{
-        title,
-        type,
-        image {
-          asset -> {
-            url
+          title,
+          type,
+          image {
+            asset -> {
+              url
+            }
           }
-        }
-      }`
+        }`
       )
       .then((data) => setSelectedWorks(data))
       .catch(console.error);
   }, []);
 
   return (
-    <div className="slider-wrapper">
+    <section className="selected-works-page slider-wrapper" id="selected-works">
       <ul className="slider">
         {selectedWorks &&
           selectedWorks.map((selectedWork, i) => (
@@ -71,8 +72,8 @@ const SelectedWorksData = () => {
             </li>
           ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
-export default SelectedWorksData;
+export default SelectedWorks;
