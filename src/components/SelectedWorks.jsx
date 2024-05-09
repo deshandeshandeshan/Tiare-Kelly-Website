@@ -41,7 +41,7 @@ const SelectedWorks = () => {
 
   return (
     <section className="selected-works-page slider-wrapper" id="selected-works">
-      <ul className="slider">
+      <ul className="slider scroll-snap">
         {selectedWorks &&
           selectedWorks.map((selectedWork, index) => {
             return (

@@ -2,13 +2,13 @@
   background-color: #f7f3f0;
 }
 
-html {
+/* html {
   scroll-snap-type: y proximity;
 }
 
-.selected-works-page {
-  scroll-snap-align: center;
-}
+.scroll-snap {
+  scroll-snap-align: start;
+} */
 
 .home-page {
   padding: 2rem 1rem 0rem;

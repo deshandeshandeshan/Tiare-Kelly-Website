@@ -1,5 +1,5 @@
 .about-page {
-  padding: 0 1rem;
+  padding: 2rem 1rem;
 }
 
 .email-link {
@@ -44,10 +44,6 @@
 }
 
 @media only screen and (min-width: 40rem) {
-  .about-page {
-    padding: 0 2rem;
-  }
-
   .about-page-intro {
     font-size: 4rem;
     line-height: 4rem;
@@ -62,7 +58,6 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     gap: 1rem;
-    padding: 0 2rem;
   }
 
   .about-page-intro {
@@ -101,6 +96,7 @@
   }
 
   .about-description {
+    padding: 0rem;
     padding-bottom: 8rem;
   }
 

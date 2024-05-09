@@ -3,7 +3,7 @@ import tiareProfilePicture from "../assets/images/about-image.png";
 
 const About = () => {
   return (
-    <div className="about-page" id="about">
+    <div className="about-page scroll-snap" id="about">
       <h2 className="about-page-intro">
         Tiare Kelly is a Composer, Musician & Artist based in Tamaki Makaurau
         (Auckland)
