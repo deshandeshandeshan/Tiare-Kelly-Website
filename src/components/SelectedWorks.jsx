@@ -27,6 +27,7 @@ const SelectedWorks = () => {
         `*[_type == "selectedWorks"]{
             title,
             type,
+            role,
             image {
               asset -> {
                 url
@@ -51,11 +52,11 @@ const SelectedWorks = () => {
               >
                 <div className="project-overlay-text">
                   <p className="selected-work-heading overlay-text-colour">
-                    {selectedWork.title}
+                    {selectedWork.title} : {selectedWork.type}
                   </p>
 
                   <p className="selected-work-type overlay-text-colour">
-                    {selectedWork.type}
+                    {selectedWork.role}
                   </p>
                 </div>
                 <Link
