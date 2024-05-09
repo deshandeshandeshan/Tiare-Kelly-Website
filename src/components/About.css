@@ -49,8 +49,8 @@
   }
 
   .about-page-intro {
-    font-size: 6rem;
-    line-height: 5.5rem;
+    font-size: 4rem;
+    line-height: 4rem;
   }
 
   .about-page-intro {
@@ -71,20 +71,21 @@
   }
 
   .about-description {
-    grid-column: 1 / 5;
-    grid-row: 2 / 3;
+    padding: 0 5rem;
+    grid-column: 1 / 9;
+    grid-row: 3 / 4;
   }
 
   .about-profile-image {
-    grid-column: 5 / 9;
+    grid-column: 1 / 9;
     grid-row: 2 / 3;
   }
 }
 
 @media only screen and (min-width: 70rem) {
   .about-page-intro {
-    font-size: 8rem;
-    line-height: 7.5rem;
+    font-size: 6rem;
+    line-height: 5.5rem;
   }
 
   .about-page-intro {

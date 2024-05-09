@@ -8,12 +8,10 @@
   display: flex;
   /* overflow: auto; */
   overflow: hidden;
-  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
 
 .slide {
-  scroll-snap-align: start;
   position: relative;
 }
 

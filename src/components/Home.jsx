@@ -10,7 +10,9 @@ const Home = () => {
         <img src={websiteTitle} className="home-title" />
       </div>
       <h3 className="sub-heading-text">Composer, Musician and Artist</h3>
-      <SelectedWorks />
+      <div className="scroll-snap-container">
+        <SelectedWorks className="scroll-snap" />
+      </div>
       <About />
     </div>
   );

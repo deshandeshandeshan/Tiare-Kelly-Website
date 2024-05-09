@@ -5,8 +5,8 @@ const About = () => {
   return (
     <div className="about-page" id="about">
       <h2 className="about-page-intro">
-        <span className="heading-italic">Tiare Kelly</span> is a Composer,
-        Musician & Artist based in Tamaki Makaurau (Auckland)
+        Tiare Kelly is a Composer, Musician & Artist based in Tamaki Makaurau
+        (Auckland)
       </h2>
       <img className="about-profile-image" src={tiareProfilePicture} />
       <div className="about-description">
