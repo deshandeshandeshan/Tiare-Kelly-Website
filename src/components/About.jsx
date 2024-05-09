@@ -38,13 +38,14 @@ const About = () => {
           and holding gigs at local wellington venues, inside and outside
           university and Launching the promotion space She.
         </p>
+      </div>
+      <div className="about-contact-info">
         <h2 className="about-padding-bottom">
           For any enquiries please{" "}
           <a className="email-link" href="mailto:exampleemail@gmail.com">
             reach out!
           </a>
         </h2>
-        <h2 className="about-padding-bottom">Links:</h2>
         <ul className="links-list">
           <li className="links-list-item">
             <a className="list-link">Soundcloud</a>

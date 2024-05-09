@@ -2,6 +2,8 @@
   background-color: #f7f3f0;
 }
 
+/* Scroll snap functionality
+
 /* html {
   scroll-snap-type: y proximity;
 }
@@ -18,13 +20,17 @@
   /* background-color: #e7e2d6; */
 }
 
+.landing-page {
+  height: 100vh;
+}
+
 .home-heading {
   padding-top: 25rem;
   padding-bottom: 1rem;
 }
 
 .home-title {
-  width: 72%;
+  width: 65%;
   min-width: 50rem;
 }
 

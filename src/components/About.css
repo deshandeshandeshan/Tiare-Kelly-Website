@@ -1,5 +1,5 @@
 .about-page {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 5rem;
 }
 
 .email-link {
@@ -8,6 +8,11 @@
 
 .about-page-intro {
   padding-bottom: 2rem;
+}
+
+.about-description,
+.about-contact-info {
+  text-align: center;
 }
 
 .about-description-paragraph {
@@ -43,6 +48,14 @@
   padding-bottom: 2rem;
 }
 
+.links-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 @media only screen and (min-width: 40rem) {
   .about-page-intro {
     font-size: 4rem;
@@ -75,6 +88,11 @@
     grid-column: 1 / 9;
     grid-row: 2 / 3;
   }
+
+  .about-contact-info {
+    grid-column: 1 / 9;
+    grid-row: 4 / 5;
+  }
 }
 
 @media only screen and (min-width: 70rem) {
@@ -97,7 +115,6 @@
 
   .about-description {
     padding: 0rem;
-    padding-bottom: 8rem;
   }
 
   .about-page {
@@ -116,6 +133,29 @@
 
   .about-profile-image {
     grid-column: 7 / 12;
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
+  }
+
+  .about-contact-info {
+    grid-column: 1 / 9;
+    grid-row: 3 / 4;
+  }
+
+  .about-profile-image {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  .links-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .about-description,
+  .about-contact-info {
+    text-align: left;
   }
 }

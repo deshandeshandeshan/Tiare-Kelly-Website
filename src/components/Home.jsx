@@ -6,7 +6,7 @@ import websiteTitle from "../assets/images/Group 48.png";
 const Home = () => {
   return (
     <div className="home">
-      <div className="scroll-snap">
+      <div className="scroll-snap landing-page">
         <div className="home-page" id="home">
           <img src={websiteTitle} className="home-title" />
         </div>
