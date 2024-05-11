@@ -2,10 +2,12 @@ import "./Home.css";
 import SelectedWorks from "./SelectedWorks";
 import About from "./About";
 import websiteTitle from "../assets/images/Group 48.png";
+import Nav from "./Nav";
 
 const Home = () => {
   return (
-    <div className="home">
+    <main className="home">
+      <Nav />
       <div className="scroll-snap landing-page">
         <div className="home-page" id="home">
           <img src={websiteTitle} className="home-title" />
@@ -14,7 +16,7 @@ const Home = () => {
       </div>
       <SelectedWorks />
       <About />
-    </div>
+    </main>
   );
 };
 
