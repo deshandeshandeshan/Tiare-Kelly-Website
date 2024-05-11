@@ -49,11 +49,21 @@
 .image-slider-left-arrow {
   left: 4rem;
   bottom: 50%;
+  color: #542316;
 }
 
 .image-slider-right-arrow {
   right: 4rem;
   bottom: 50%;
+  color: #542316;
+}
+
+.image-slider-left-arrow:hover,
+.image-slider-right-arrow:hover {
+  color: white;
+  border-color: #542316;
+  background-color: #542316;
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media only screen and (min-width: 40rem) {
