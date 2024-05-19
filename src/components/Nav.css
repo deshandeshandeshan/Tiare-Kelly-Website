@@ -20,6 +20,7 @@
 
 .nav-list-link:hover {
   background-color: #ffc4b4;
+  color: #542316;
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 

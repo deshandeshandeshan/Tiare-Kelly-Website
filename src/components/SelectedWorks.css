@@ -11,7 +11,8 @@
   scroll-behavior: smooth;
 }
 
-.slide {
+.slide,
+.selected-works-page {
   position: relative;
 }
 
@@ -40,6 +41,7 @@
 
 .image-slider-left-arrow,
 .image-slider-right-arrow {
+  cursor: pointer;
   border: 0.2rem solid;
   border-radius: 1.5rem;
   background-color: white;

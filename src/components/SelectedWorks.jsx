@@ -41,6 +41,16 @@ const SelectedWorks = () => {
 
   return (
     <section className="selected-works-page slider-wrapper" id="selected-works">
+      <FaAngleLeft
+        size="42"
+        onClick={prev}
+        className="image-slider-left-arrow"
+      />
+      <FaAngleRight
+        size="42"
+        onClick={next}
+        className="image-slider-right-arrow"
+      />
       <ul className="slider scroll-snap">
         {selectedWorks &&
           selectedWorks.map((selectedWork, index) => {
@@ -68,16 +78,6 @@ const SelectedWorks = () => {
                     className={`selected-work-image slide-${index}`}
                   />
                 </Link>
-                <FaAngleLeft
-                  size="42"
-                  onClick={prev}
-                  className="image-slider-left-arrow"
-                />
-                <FaAngleRight
-                  size="42"
-                  onClick={next}
-                  className="image-slider-right-arrow"
-                />
               </li>
             );
           })}
