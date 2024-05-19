@@ -44,6 +44,7 @@
   border-radius: 1.5rem;
   background-color: white;
   border-color: white;
+  opacity: 0.4;
 }
 
 .image-slider-left-arrow {
@@ -64,6 +65,7 @@
   border-color: #542316;
   background-color: #542316;
   transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
 }
 
 @media only screen and (min-width: 40rem) {
