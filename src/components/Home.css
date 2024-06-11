@@ -13,7 +13,7 @@
 } */
 
 .home-page {
-  padding: 2rem 1rem 0rem;
+  padding: 5rem 1rem 0rem;
   display: flex;
   justify-content: center;
 
@@ -21,7 +21,7 @@
 }
 
 .landing-page {
-  height: 100vh;
+  padding-bottom: 5rem;
 }
 
 .home-heading {
@@ -30,14 +30,14 @@
 }
 
 .home-title {
-  width: 65%;
+  width: 75%;
   min-width: 50rem;
+  padding-bottom: 2rem;
 }
 
 .sub-heading-text {
   display: flex;
   justify-content: center;
-  padding-bottom: 5rem;
 }
 
 @media only screen and (min-width: 50rem) {

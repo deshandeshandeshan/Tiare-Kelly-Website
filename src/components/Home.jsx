@@ -1,7 +1,7 @@
 import "./Home.css";
 import SelectedWorks from "./SelectedWorks";
 import About from "./About";
-import websiteTitle from "../assets/images/Group 48.png";
+import websiteTitle from "../assets/images/tia-title.png";
 import Nav from "./Nav";
 
 const Home = () => {

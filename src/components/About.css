@@ -56,10 +56,20 @@
   flex-wrap: wrap;
 }
 
+.about-enquiries {
+  padding: 2rem 0 2rem;
+  font-size: 1.8rem;
+}
+
 @media only screen and (min-width: 40rem) {
+  .about-page {
+    padding: 2rem 1rem 5rem;
+  }
+
   .about-page-intro {
     font-size: 4rem;
     line-height: 4rem;
+    text-align: center;
   }
 
   .about-page-intro {
@@ -96,9 +106,13 @@
 }
 
 @media only screen and (min-width: 70rem) {
+  .about-page {
+    padding: 2rem 1rem 5rem;
+  }
+
   .about-page-intro {
-    font-size: 6rem;
-    line-height: 5.5rem;
+    font-size: 6.5rem;
+    line-height: 6rem;
   }
 
   .about-page-intro {
@@ -114,7 +128,7 @@
   }
 
   .about-description {
-    padding: 0rem;
+    padding: 0 15rem;
   }
 
   .about-page {
@@ -127,35 +141,23 @@
   }
 
   .about-description {
-    grid-column: 1 / 6;
-    grid-row: 2 / 3;
-  }
-
-  .about-profile-image {
-    grid-column: 7 / 12;
-    grid-row: 2 / 4;
-  }
-
-  .about-contact-info {
-    grid-column: 1 / 9;
+    grid-column: 1 / 13;
     grid-row: 3 / 4;
   }
 
   .about-profile-image {
-    max-width: 30rem;
-    margin: 0 auto;
+    grid-column: 2 / 12;
+    grid-row: 2 / 3;
   }
 
-  .links-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .about-description,
   .about-contact-info {
-    text-align: left;
+    grid-column: 1 / 13;
+    grid-row: 4 / 5;
+  }
+
+  .about-profile-image {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-bottom: 3rem;
   }
 }

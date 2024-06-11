@@ -40,7 +40,7 @@ const About = () => {
         </p>
       </div>
       <div className="about-contact-info">
-        <h2 className="about-padding-bottom">
+        <h2 className="about-enquiries about-padding-bottom">
           For any enquiries please{" "}
           <a className="email-link" href="mailto:exampleemail@gmail.com">
             reach out!
