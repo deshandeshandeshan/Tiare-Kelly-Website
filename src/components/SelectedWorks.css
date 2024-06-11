@@ -1,0 +1,77 @@
+.selected-works-list-item {
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slider {
+  height: 100%;
+  display: flex;
+  /* overflow: auto; */
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.slide,
+.selected-works-page {
+  position: relative;
+}
+
+.selected-work-image {
+  width: 100vw;
+  height: 100vh;
+  flex: 1 0 100%;
+  object-fit: cover;
+}
+
+.project-overlay-text,
+.image-slider-left-arrow,
+.image-slider-right-arrow {
+  position: absolute;
+  z-index: 1;
+}
+
+.project-overlay-text {
+  top: 4rem;
+  left: 4rem;
+}
+
+.overlay-text-colour {
+  color: white;
+}
+
+.image-slider-left-arrow,
+.image-slider-right-arrow {
+  cursor: pointer;
+  border: 0.2rem solid;
+  border-radius: 1.5rem;
+  background-color: white;
+  border-color: white;
+  opacity: 0.4;
+}
+
+.image-slider-left-arrow {
+  left: 4rem;
+  bottom: 50%;
+  color: #542316;
+}
+
+.image-slider-right-arrow {
+  right: 4rem;
+  bottom: 50%;
+  color: #542316;
+}
+
+.image-slider-left-arrow:hover,
+.image-slider-right-arrow:hover {
+  color: white;
+  border-color: #542316;
+  background-color: #542316;
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+}
+
+@media only screen and (min-width: 40rem) {
+}
+
+@media only screen and (min-width: 70rem) {
+}

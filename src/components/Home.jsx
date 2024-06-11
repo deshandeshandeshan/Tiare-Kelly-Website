@@ -1,34 +1,22 @@
 import "./Home.css";
-import SelectedWorks from "./SelectedWork";
+import SelectedWorks from "./SelectedWorks";
 import About from "./About";
-// import Extras from "./Extras";
-import websiteTitle from "../assets/images/Group 48.png";
+import websiteTitle from "../assets/images/tia-title.png";
+import Nav from "./Nav";
 
 const Home = () => {
   return (
-    <div className="home">
-      <div className="home-page" id="home">
-        <img src={websiteTitle} className="home-title" />
-
-        {/* <div className="contact-details">
-          <ul className="contact-details-list">
-            <li className="contact-details-list-item">
-              <p>Contact</p>
-            </li>
-            <li className="contact-details-list-item">
-              <p>+64 000 000 0000</p>
-            </li>
-            <li className="contact-details-list-item">
-              <p>tiarekelly@gmail.com</p>
-            </li>
-          </ul>
-        </div> */}
+    <main className="home">
+      <Nav />
+      <div className="scroll-snap landing-page">
+        <div className="home-page" id="home">
+          <img src={websiteTitle} className="home-title" />
+        </div>
+        <h3 className="sub-heading-text">Composer, Musician and Artist</h3>
       </div>
-      <h3 className="sub-heading-text">Composer, Musician and Artist</h3>
       <SelectedWorks />
       <About />
-      {/* <Extras /> */}
-    </div>
+    </main>
   );
 };
 

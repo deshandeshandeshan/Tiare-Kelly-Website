@@ -2,12 +2,26 @@
   background-color: #f7f3f0;
 }
 
+/* Scroll snap functionality
+
+/* html {
+  scroll-snap-type: y proximity;
+}
+
+.scroll-snap {
+  scroll-snap-align: start;
+} */
+
 .home-page {
-  padding: 2rem 1rem 0rem;
+  padding: 5rem 1rem 0rem;
   display: flex;
   justify-content: center;
 
   /* background-color: #e7e2d6; */
+}
+
+.landing-page {
+  padding-bottom: 5rem;
 }
 
 .home-heading {
@@ -16,14 +30,14 @@
 }
 
 .home-title {
-  width: 72%;
+  width: 75%;
   min-width: 50rem;
+  padding-bottom: 2rem;
 }
 
 .sub-heading-text {
   display: flex;
   justify-content: center;
-  padding-bottom: 5rem;
 }
 
 @media only screen and (min-width: 50rem) {

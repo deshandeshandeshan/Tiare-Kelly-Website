@@ -3,10 +3,10 @@ import tiareProfilePicture from "../assets/images/about-image.png";
 
 const About = () => {
   return (
-    <div className="about-page" id="about">
+    <div className="about-page scroll-snap" id="about">
       <h2 className="about-page-intro">
-        <span className="heading-italic">Tiare Kelly</span> is a Composer,
-        Musician & Artist based in Tamaki Makaurau (Auckland)
+        Tiare Kelly is a Composer, Musician & Artist based in Tamaki Makaurau
+        (Auckland)
       </h2>
       <img className="about-profile-image" src={tiareProfilePicture} />
       <div className="about-description">
@@ -38,13 +38,14 @@ const About = () => {
           and holding gigs at local wellington venues, inside and outside
           university and Launching the promotion space She.
         </p>
-        <h2 className="about-padding-bottom">
+      </div>
+      <div className="about-contact-info">
+        <h2 className="about-enquiries about-padding-bottom">
           For any enquiries please{" "}
           <a className="email-link" href="mailto:exampleemail@gmail.com">
             reach out!
           </a>
         </h2>
-        <h2 className="about-padding-bottom">Links:</h2>
         <ul className="links-list">
           <li className="links-list-item">
             <a className="list-link">Soundcloud</a>

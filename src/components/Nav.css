@@ -4,18 +4,23 @@
   bottom: 2rem;
   left: 50%;
   transform: translate(-50%, 0);
+  z-index: 2;
 }
 
 .nav-list-item {
+  margin-right: 0.5rem;
+}
+
+.nav-list-link {
   border: solid 0.05rem;
   border-radius: 1.5rem;
-  margin-right: 0.5rem;
   border-color: #542316;
   background-color: #f1f2ec;
 }
 
-.nav-list-item:hover {
-  background-color: #e4dcda;
+.nav-list-link:hover {
+  background-color: #ffc4b4;
+  color: #542316;
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
@@ -44,6 +49,7 @@
 
 .active {
   color: #f7f3f0;
+  border-color: #542316;
   display: flex;
   justify-content: center;
   background-color: #542316;
