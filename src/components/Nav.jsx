@@ -23,7 +23,7 @@ const Nav = () => {
             className="nav-list-link nav-list-color nav-list-selected-works"
             activeClass="active"
             spy={true}
-            to="selected-works"
+            to="selected-work-image"
             smooth={true}
             offset={0}
             duration={1200}

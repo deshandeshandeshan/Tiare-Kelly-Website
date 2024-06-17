@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
-@import url("https://use.typekit.net/xms2rkt.css");
+@font-face {
+  font-family: Rag;
+  src: url(./assets/fonts/Rag-Font/Rag-Regular.woff);
+}
 
 * {
   margin: 0;
@@ -18,9 +20,13 @@ h3,
 a,
 small {
   color: #542316;
-  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-family: Rag;
   font-weight: 400;
   font-style: normal;
+}
+
+p {
+  line-height: 1.4rem;
 }
 
 a,
