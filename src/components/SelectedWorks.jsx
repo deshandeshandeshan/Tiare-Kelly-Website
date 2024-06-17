@@ -75,6 +75,7 @@ const SelectedWorks = () => {
                 >
                   <img
                     src={selectedWork.image.asset.url}
+                    alt={selectedWork.title}
                     className={`selected-work-image slide-${index}`}
                   />
                 </Link>
