@@ -25,6 +25,10 @@ small {
   font-style: normal;
 }
 
+p {
+  line-height: 1.4rem;
+}
+
 a,
 li,
 ul {
