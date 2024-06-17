@@ -13,7 +13,7 @@
 } */
 
 .home-page {
-  padding: 5rem 1rem 0rem;
+  padding: 8rem 1rem 0rem;
   display: flex;
   justify-content: center;
 
@@ -21,7 +21,7 @@
 }
 
 .landing-page {
-  padding-bottom: 5rem;
+  padding-bottom: 9rem;
 }
 
 .home-heading {

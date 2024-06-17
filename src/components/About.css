@@ -24,17 +24,6 @@
   line-height: 2.9rem;
 }
 
-.about-page-intro {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0.1rem;
-}
-
-.heading-italic {
-  font-family: "Pinyon Script", cursive;
-}
-
 .about-padding-bottom {
   padding-bottom: 1rem;
 }
@@ -70,10 +59,6 @@
     font-size: 4rem;
     line-height: 4rem;
     text-align: center;
-  }
-
-  .about-page-intro {
-    letter-spacing: 0.2rem;
   }
 
   .about-page {
@@ -113,10 +98,6 @@
   .about-page-intro {
     font-size: 6.5rem;
     line-height: 6rem;
-  }
-
-  .about-page-intro {
-    letter-spacing: 0.3rem;
   }
 
   .about-description-paragraph {
