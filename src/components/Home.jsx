@@ -8,13 +8,12 @@ import Nav from "./Nav";
 const Home = () => {
   return (
     <main className="home">
-      <Nav />
+      {/* <Nav /> */}
       <div className="scroll-snap landing-page">
-        <div className="home-page" id="home">
+        <div className="home-page home-title-content" id="home">
           <img src={websiteTitle} className="home-title" />
-          {/* <video src={websiteTitleVideo} autoPlay loop /> */}
+          <h3 className="sub-heading-text">Composer, Musician and Artist</h3>
         </div>
-        <h3 className="sub-heading-text">Composer, Musician and Artist</h3>
       </div>
       <SelectedWorks />
       <About />
