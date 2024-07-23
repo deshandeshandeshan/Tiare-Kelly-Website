@@ -51,7 +51,7 @@ const SelectedWorks = () => {
         onClick={next}
         className="image-slider-right-arrow"
       />
-      <ul className="slider scroll-snap">
+      <ul className="slider">
         {selectedWorks &&
           selectedWorks.map((selectedWork, index) => {
             return (

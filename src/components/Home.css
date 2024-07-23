@@ -2,14 +2,16 @@
   background-color: #f7f3f0;
 }
 
-/* Scroll snap functionality
+/* Scroll snap functionality */
 
 /* html {
   scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 
 .scroll-snap {
   scroll-snap-align: start;
+  scroll-behavior: smooth;
 } */
 
 .home-title-content {

@@ -3,13 +3,12 @@ import SelectedWorks from "./SelectedWorks";
 import About from "./About";
 import websiteTitle from "../assets/images/tia-title.png";
 // import websiteTitleVideo from "../assets/video/Tia-title-video.webm";
-import Nav from "./Nav";
+// import Nav from "./Nav";
 
 const Home = () => {
   return (
     <main className="home">
-      {/* <Nav /> */}
-      <div className="scroll-snap landing-page">
+      <div className=" landing-page">
         <div className="home-page home-title-content" id="home">
           <img src={websiteTitle} className="home-title" />
           <h3 className="sub-heading-text">Composer, Musician and Artist</h3>
