@@ -2,6 +2,10 @@
   padding: 2rem 1rem 5rem;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .email-link {
   text-decoration: underline;
 }

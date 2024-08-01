@@ -4,7 +4,7 @@ import { MdSkipPrevious } from "react-icons/md";
 import { MdPlayArrow } from "react-icons/md";
 import { MdPause } from "react-icons/md";
 import { useState, useRef, useEffect } from "react";
-import playlist from "../data/Playlist";
+import playlist from "../../data/Playlist";
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);

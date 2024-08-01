@@ -1,5 +1,5 @@
 import "./App.css";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/utilities/ScrollToTop";
 import Home from "./components/Home";
 import { Routes, Route, useLocation } from "react-router-dom";
 import SelectedWork from "./components/SelectedWork";
