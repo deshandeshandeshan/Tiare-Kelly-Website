@@ -40,7 +40,8 @@
 
 .about-profile-image {
   width: 100%;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
 }
 
 .links-list {
@@ -137,7 +138,7 @@
   }
 
   .about-profile-image {
-    grid-column: 2 / 12;
+    grid-column: 1 / 13;
     grid-row: 2 / 3;
   }
 
@@ -147,8 +148,10 @@
   }
 
   .about-profile-image {
-    max-width: 50rem;
+    /* max-width: 50rem; */
+    max-height: 45rem;
     margin: 0 auto;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    object-fit: cover;
   }
 }

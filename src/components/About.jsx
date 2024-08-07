@@ -1,5 +1,5 @@
 import "./About.css";
-import tiareProfilePicture from "../assets/images/about-image.png";
+import tiareProfilePicture from "../assets/images/about-image.jpeg";
 import { TitleStaggeredReveal } from "./utilities/TitleScrollRevealStaggered";
 import { Reveal } from "./utilities/ScrollRevealText";
 
