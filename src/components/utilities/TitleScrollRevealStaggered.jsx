@@ -1,14 +1,13 @@
 import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-export const StaggeredReveal = () => {
+export const TitleStaggeredReveal = (props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const str =
-    "Tiare Kelly is a Composer, Musician & Artist based in Tamaki Makaurau (Auckland)";
-  const DURATION = 0.25;
-  const STAGGER = 0.025;
 
+  const DURATION = 2;
+  const STAGGER = 0.05;
+  const str = props.children;
   const mainControls = useAnimation();
 
   useEffect(() => {
@@ -19,20 +18,20 @@ export const StaggeredReveal = () => {
 
   return (
     <div style={{ overflow: "hidden" }} ref={ref}>
-      {str.split("").map((l, i) => {
+      {str.split(" ").map((l, i) => {
         return (
           <motion.span
-            className="inline-block"
+            className="inline-block-text"
             key={i}
             variants={{
-              hidden: { opacity: 0, y: 100 },
+              hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
             initial="hidden"
             animate={mainControls}
             transition={{
               duration: DURATION,
-              ease: "easeInOut",
+              ease: [0.2, 0.65, 0.3, 0.9],
               delay: STAGGER * i,
             }}
           >

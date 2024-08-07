@@ -1,14 +1,18 @@
 import "./About.css";
 import tiareProfilePicture from "../assets/images/about-image.png";
+import { TitleStaggeredReveal } from "./utilities/TitleScrollRevealStaggered";
 import { Reveal } from "./utilities/ScrollRevealText";
-import { StaggeredReveal } from "./utilities/ScrollRevealStaggered";
 
 const About = () => {
   return (
     <div className="about-page scroll-snap" id="about">
       <h2 className="about-page-intro">
-        <StaggeredReveal />
+        <TitleStaggeredReveal>
+          Tiare Kelly is a Composer, Musician & Artist based in Tamaki Makaurau
+          (Auckland)
+        </TitleStaggeredReveal>
       </h2>
+
       <img className="about-profile-image" src={tiareProfilePicture} />
       <div className="about-description">
         <Reveal>
@@ -23,7 +27,7 @@ const About = () => {
           <p className="about-description-paragraph about-paragraph-2">
             Completing her grade 7 Trinity college classical piano exam at 17
             and studying under the incredible composer and pianist Jonathan
-            Crayford.{" "}
+            Crayford.
           </p>
         </Reveal>
         <Reveal>
@@ -31,7 +35,7 @@ const About = () => {
             Studying classical South Indian music on the sitar and touring with
             the renowned Tabla player Basant Madhur. Tiare then proceeded to
             Wellington Massey university, taking on and soon graduating with a
-            bachelor of Commercial Music majoring in Industry.{" "}
+            bachelor of Commercial Music majoring in Industry.
           </p>
         </Reveal>
         <Reveal>

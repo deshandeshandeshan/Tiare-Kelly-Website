@@ -2,8 +2,10 @@
   padding: 2rem 1rem 5rem;
 }
 
-.inline-block {
+.inline-block-text {
   display: inline-block;
+  white-space: nowrap;
+  margin-right: 0.25em;
 }
 
 .email-link {
