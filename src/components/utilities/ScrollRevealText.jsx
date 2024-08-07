@@ -22,7 +22,7 @@ export const Reveal = ({ children }) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.45 }}
+        transition={{ duration: 1.2, delay: 0.45 }}
       >
         {children}
       </motion.div>
