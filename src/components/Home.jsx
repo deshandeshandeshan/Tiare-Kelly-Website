@@ -1,8 +1,7 @@
 import "./Home.css";
 import SelectedWorks from "./SelectedWorks";
 import About from "./About";
-import websiteTitle from "../assets/images/tia-title.png";
-// import websiteTitleVideo from "../assets/video/Tia-title-video.webm";
+import websiteTitle from "../assets/images/tk.png";
 // import Nav from "./Nav";
 
 const Home = () => {

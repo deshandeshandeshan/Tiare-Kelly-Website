@@ -59,7 +59,7 @@ const SelectedWorks = () => {
                 key={`selectedWork_${index}`}
                 className="selected-works-list-item open slide"
                 style={{
-                  transform: `translateX(-${currentProject * 100}%)`,
+                  transform: `translateX(-${currentProject * 103}%)`,
                 }}
               >
                 <div className="project-overlay-text">
