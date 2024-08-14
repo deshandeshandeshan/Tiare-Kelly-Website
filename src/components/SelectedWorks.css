@@ -1,36 +1,44 @@
+.selected-works-wrapper {
+  /* max-width: 1200px; */
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 7rem;
+}
+
 .selected-works-list-item {
   cursor: pointer;
   transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .slider-wrapper {
-  padding: 0 0 4rem;
+  height: 75vh;
+  width: 100%;
+  position: relative;
 }
 
 .slider {
   height: 100%;
+  width: 100%;
   display: flex;
-  /* overflow: auto; */
+  /* scroll-behavior: smooth; */
   overflow: hidden;
-  scroll-behavior: smooth;
-  gap: 4rem;
+  border-radius: 0.5rem;
 }
 
-.slide,
-.selected-works-page {
-  position: relative;
+.slide {
+  height: 100%;
+  width: 100%;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .selected-work-image {
-  width: 97vw;
-  height: 90vh;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  /* flex: 1 0 100%; */
-  border-radius: 1rem;
-}
-
-.selected-works-list-item {
-  padding: 0 2rem;
+  display: block;
 }
 
 .project-overlay-text,
