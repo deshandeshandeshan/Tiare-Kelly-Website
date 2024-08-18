@@ -14,13 +14,13 @@
 .nav-list-link {
   border: solid 0.05rem;
   border-radius: 1.5rem;
-  border-color: #542316;
+  border-color: #2c2c2c;
   background-color: #f1f2ec;
 }
 
 .nav-list-link:hover {
-  background-color: #ffc4b4;
-  color: #542316;
+  background-color: #bcbcbc;
+  color: #2c2c2c;
   transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
@@ -44,15 +44,15 @@
 }
 
 .nav-list-color {
-  color: #542316;
+  color: #2c2c2c;
 }
 
 .active {
   color: #f7f3f0;
-  border-color: #542316;
+  border-color: #2c2c2c;
   display: flex;
   justify-content: center;
-  background-color: #542316;
+  background-color: #2c2c2c;
   border-radius: 1.5rem;
   transition: background-color 1s cubic-bezier(0.2, 1, 0.3, 1);
 }
