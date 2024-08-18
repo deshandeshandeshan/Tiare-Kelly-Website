@@ -2,6 +2,12 @@
   padding: 2rem 1rem 5rem;
 }
 
+.inline-block-text {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 0.25em;
+}
+
 .email-link {
   text-decoration: underline;
 }
@@ -34,7 +40,8 @@
 
 .about-profile-image {
   width: 100%;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
 }
 
 .links-list {
@@ -131,7 +138,7 @@
   }
 
   .about-profile-image {
-    grid-column: 2 / 12;
+    grid-column: 1 / 13;
     grid-row: 2 / 3;
   }
 
@@ -141,8 +148,10 @@
   }
 
   .about-profile-image {
-    max-width: 50rem;
+    max-width: 70rem;
+    max-height: 45rem;
     margin: 0 auto;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    object-fit: cover;
   }
 }

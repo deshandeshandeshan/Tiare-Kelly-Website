@@ -1,26 +1,44 @@
+.selected-works-wrapper {
+  /* max-width: 1200px; */
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 7rem;
+}
+
 .selected-works-list-item {
   cursor: pointer;
   transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.slider {
-  height: 100%;
-  display: flex;
-  /* overflow: auto; */
-  overflow: hidden;
-  scroll-behavior: smooth;
-}
-
-.slide,
-.selected-works-page {
+.slider-wrapper {
+  height: 78vh;
+  width: 100%;
   position: relative;
 }
 
+.slider {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* scroll-behavior: smooth; */
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
 .selected-work-image {
-  width: 100vw;
-  height: 100vh;
-  flex: 1 0 100%;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .project-overlay-text,
@@ -31,8 +49,8 @@
 }
 
 .project-overlay-text {
-  top: 4rem;
-  left: 4rem;
+  top: 2rem;
+  left: 1rem;
 }
 
 .overlay-text-colour {
@@ -50,27 +68,43 @@
 }
 
 .image-slider-left-arrow {
-  left: 4rem;
+  left: 1rem;
   bottom: 50%;
   color: #542316;
 }
 
 .image-slider-right-arrow {
-  right: 4rem;
+  right: 1rem;
   bottom: 50%;
   color: #542316;
 }
 
 .image-slider-left-arrow:hover,
 .image-slider-right-arrow:hover {
-  color: white;
-  border-color: #542316;
-  background-color: #542316;
+  color: #2c2c2c;
+  /* border-color: #2c2c2c; */
+  background-color: white;
   transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 1;
 }
 
 @media only screen and (min-width: 40rem) {
+  .project-overlay-text {
+    top: 4rem;
+    left: 4rem;
+  }
+
+  .image-slider-left-arrow {
+    left: 4rem;
+    bottom: 50%;
+    color: #542316;
+  }
+
+  .image-slider-right-arrow {
+    right: 4rem;
+    bottom: 50%;
+    color: #542316;
+  }
 }
 
 @media only screen and (min-width: 70rem) {
