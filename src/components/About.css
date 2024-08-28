@@ -62,10 +62,6 @@
 }
 
 @media only screen and (min-width: 40rem) {
-  .about-page {
-    padding: 2rem 1rem 5rem;
-  }
-
   .about-page-intro {
     font-size: 4rem;
     line-height: 4rem;
@@ -102,10 +98,6 @@
 }
 
 @media only screen and (min-width: 70rem) {
-  .about-page {
-    padding: 2rem 1rem 5rem;
-  }
-
   .about-page-intro {
     font-size: 6.5rem;
     line-height: 6rem;
