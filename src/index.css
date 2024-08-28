@@ -1,6 +1,6 @@
 @font-face {
-  font-family: Rag;
-  src: url(./assets/fonts/Rag-Font/Rag-Regular.woff);
+  font-family: TRJND;
+  src: url(./assets/fonts/TRJND-font/TRJNDaVinci-Regular-Trial.ttf);
 }
 
 * {
@@ -10,7 +10,7 @@
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 p,
@@ -26,7 +26,7 @@ small {
 }
 
 p {
-  line-height: 1.4rem;
+  line-height: 1.2rem;
 }
 
 a,
@@ -42,7 +42,7 @@ a {
 
 @media only screen and (min-width: 40rem) {
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 

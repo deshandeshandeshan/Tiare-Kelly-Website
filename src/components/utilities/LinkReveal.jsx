@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-export const TitleStaggeredReveal = (props) => {
+export const LinkReveal = (props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const DURATION = 2;
-  const STAGGER = 0.05;
+  const DURATION = 0.5;
+  const STAGGER = 0.08;
   const str = props.children;
   const mainControls = useAnimation();
 
@@ -18,10 +18,10 @@ export const TitleStaggeredReveal = (props) => {
 
   return (
     <div style={{ overflow: "hidden" }} ref={ref}>
-      {str.split(" ").map((l, i) => {
+      {str.split("").map((l, i) => {
         return (
           <motion.span
-            className="inline-block-text-title"
+            className="inline-block-text"
             key={i}
             variants={{
               hidden: { opacity: 0, y: 20 },

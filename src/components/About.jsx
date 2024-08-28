@@ -2,6 +2,7 @@ import "./About.css";
 import tiareProfilePicture from "../assets/images/about-image.jpeg";
 import { TitleStaggeredReveal } from "./utilities/TitleScrollRevealStaggered";
 import { Reveal } from "./utilities/ScrollRevealText";
+import { LinkReveal } from "./utilities/LinkReveal";
 
 const About = () => {
   return (
@@ -56,24 +57,34 @@ const About = () => {
         </Reveal>
       </div>
       <div className="about-contact-info">
-        <h2 className="about-enquiries about-padding-bottom">
-          For any enquiries please{" "}
-          <a className="email-link" href="mailto:exampleemail@gmail.com">
-            reach out!
-          </a>
-        </h2>
+        <Reveal>
+          <h2 className="about-enquiries about-padding-bottom">
+            For any enquiries please reach out!{" "}
+            <a className="email-link" href="mailto:exampleemail@gmail.com">
+              tiarekelly@gmail.com
+            </a>
+          </h2>
+        </Reveal>
         <ul className="links-list">
           <li className="links-list-item">
-            <a className="list-link">Soundcloud</a>
+            <a className="list-link">
+              <LinkReveal>Soundcloud</LinkReveal>
+            </a>
           </li>
           <li className="links-list-item">
-            <a className="list-link">Bootcamp</a>
+            <a className="list-link">
+              <LinkReveal>Bandcamp</LinkReveal>
+            </a>
           </li>
           <li className="links-list-item">
-            <a className="list-link">Instagram</a>
+            <a className="list-link">
+              <LinkReveal>Instagram</LinkReveal>
+            </a>
           </li>
           <li className="links-list-item">
-            <a className="list-link">YouTube</a>
+            <a className="list-link">
+              <LinkReveal>YouTube</LinkReveal>
+            </a>
           </li>
         </ul>
       </div>

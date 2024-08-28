@@ -5,6 +5,12 @@
 .inline-block-text {
   display: inline-block;
   white-space: nowrap;
+  margin-right: 0.1em;
+}
+
+.inline-block-text-title {
+  display: inline-block;
+  white-space: nowrap;
   margin-right: 0.25em;
 }
 
@@ -61,6 +67,10 @@
   letter-spacing: -0.25rem;
 }
 
+.list-link {
+  font-size: 1rem;
+}
+
 @media only screen and (min-width: 40rem) {
   .about-page-intro {
     font-size: 4rem;
@@ -94,6 +104,10 @@
   .about-contact-info {
     grid-column: 1 / 9;
     grid-row: 4 / 5;
+  }
+
+  .list-link {
+    font-size: 1.2rem;
   }
 }
 
