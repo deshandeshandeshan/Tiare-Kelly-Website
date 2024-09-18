@@ -65,28 +65,22 @@ const About = () => {
             </a>
           </h2>
         </Reveal>
-        <ul className="links-list">
-          <li className="links-list-item">
-            <a className="list-link">
-              <LinkReveal>Soundcloud</LinkReveal>
-            </a>
-          </li>
-          <li className="links-list-item">
-            <a className="list-link">
-              <LinkReveal>Bandcamp</LinkReveal>
-            </a>
-          </li>
-          <li className="links-list-item">
-            <a className="list-link">
-              <LinkReveal>Instagram</LinkReveal>
-            </a>
-          </li>
-          <li className="links-list-item">
-            <a className="list-link">
-              <LinkReveal>YouTube</LinkReveal>
-            </a>
-          </li>
-        </ul>
+        <Reveal>
+          <ul className="links-list">
+            <li className="links-list-item">
+              <a className="list-link">Soundcloud</a>
+            </li>
+            <li className="links-list-item">
+              <a className="list-link">Bandcamp</a>
+            </li>
+            <li className="links-list-item">
+              <a className="list-link">Instagram</a>
+            </li>
+            <li className="links-list-item">
+              <a className="list-link">YouTube</a>
+            </li>
+          </ul>
+        </Reveal>
       </div>
     </div>
   );
