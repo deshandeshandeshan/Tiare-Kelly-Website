@@ -21,7 +21,7 @@ export const TitleStaggeredReveal = (props) => {
       {str.split(" ").map((l, i) => {
         return (
           <motion.span
-            className="inline-block-text"
+            className="inline-block-text-title"
             key={i}
             variants={{
               hidden: { opacity: 0, y: 20 },

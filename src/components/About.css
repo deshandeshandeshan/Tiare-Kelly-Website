@@ -1,8 +1,14 @@
 .about-page {
-  padding: 2rem 1rem 5rem;
+  padding: 2rem 2rem 5rem;
 }
 
 .inline-block-text {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 0.1em;
+}
+
+.inline-block-text-title {
   display: inline-block;
   white-space: nowrap;
   margin-right: 0.25em;
@@ -16,7 +22,10 @@
   padding-bottom: 2rem;
 }
 
-.about-description,
+.about-description {
+  text-align: left;
+}
+
 .about-contact-info {
   text-align: center;
 }
@@ -61,11 +70,15 @@
   letter-spacing: -0.25rem;
 }
 
-@media only screen and (min-width: 40rem) {
-  .about-page {
-    padding: 2rem 1rem 5rem;
-  }
+.list-link {
+  font-size: 1rem;
+}
 
+.about-description {
+  padding-bottom: 4rem;
+}
+
+@media only screen and (min-width: 40rem) {
   .about-page-intro {
     font-size: 4rem;
     line-height: 4rem;
@@ -85,7 +98,6 @@
   }
 
   .about-description {
-    padding: 0 5rem;
     grid-column: 1 / 9;
     grid-row: 3 / 4;
   }
@@ -99,13 +111,13 @@
     grid-column: 1 / 9;
     grid-row: 4 / 5;
   }
+
+  .list-link {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 70rem) {
-  .about-page {
-    padding: 2rem 1rem 5rem;
-  }
-
   .about-page-intro {
     font-size: 6.5rem;
     line-height: 6rem;
@@ -119,9 +131,9 @@
     padding-bottom: 4rem;
   }
 
-  .about-description {
+  /* .about-description {
     padding: 0 15rem;
-  }
+  } */
 
   .about-page {
     grid-template-columns: repeat(12, 1fr);
@@ -133,7 +145,7 @@
   }
 
   .about-description {
-    grid-column: 1 / 13;
+    grid-column: 2 / 11;
     grid-row: 3 / 4;
   }
 
@@ -148,10 +160,9 @@
   }
 
   .about-profile-image {
-    max-width: 70rem;
-    max-height: 45rem;
+    aspect-ratio: 16/8;
     margin: 0 auto;
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
     object-fit: cover;
   }
 }

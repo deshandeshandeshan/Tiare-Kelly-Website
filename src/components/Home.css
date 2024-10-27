@@ -52,6 +52,7 @@
 @media only screen and (min-width: 50rem) {
   .sub-heading-text {
     margin: 0;
+    font-size: 1.2rem;
     text-align: left;
     position: absolute;
     top: 100%;

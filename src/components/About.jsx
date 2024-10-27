@@ -1,9 +1,23 @@
 import "./About.css";
+import { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import tiareProfilePicture from "../assets/images/about-image.jpeg";
 import { TitleStaggeredReveal } from "./utilities/TitleScrollRevealStaggered";
 import { Reveal } from "./utilities/ScrollRevealText";
+// import { LinkReveal } from "./utilities/LinkReveal";
 
 const About = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
     <div className="about-page scroll-snap" id="about">
       <h2 className="about-page-intro">
@@ -12,8 +26,24 @@ const About = () => {
           (Auckland)
         </TitleStaggeredReveal>
       </h2>
-
-      <img className="about-profile-image" src={tiareProfilePicture} />
+      <div
+        className="about-profile-image"
+        style={{ overflow: "hidden" }}
+        ref={ref}
+      >
+        <motion.div
+          className="about-profile-image"
+          variants={{
+            hidden: { opacity: 0, y: 0 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 1.2, delay: 0.45 }}
+        >
+          <img className="about-profile-image" src={tiareProfilePicture} />
+        </motion.div>
+      </div>
       <div className="about-description">
         <Reveal>
           <p className="about-description-paragraph about-paragraph-1">
@@ -56,26 +86,30 @@ const About = () => {
         </Reveal>
       </div>
       <div className="about-contact-info">
-        <h2 className="about-enquiries about-padding-bottom">
-          For any enquiries please{" "}
-          <a className="email-link" href="mailto:exampleemail@gmail.com">
-            reach out!
-          </a>
-        </h2>
-        <ul className="links-list">
-          <li className="links-list-item">
-            <a className="list-link">Soundcloud</a>
-          </li>
-          <li className="links-list-item">
-            <a className="list-link">Bootcamp</a>
-          </li>
-          <li className="links-list-item">
-            <a className="list-link">Instagram</a>
-          </li>
-          <li className="links-list-item">
-            <a className="list-link">YouTube</a>
-          </li>
-        </ul>
+        <Reveal>
+          <h2 className="about-enquiries about-padding-bottom">
+            For any enquiries please reach out!{" "}
+            <a className="email-link" href="mailto:exampleemail@gmail.com">
+              tiarekelly@gmail.com
+            </a>
+          </h2>
+        </Reveal>
+        <Reveal>
+          <ul className="links-list">
+            <li className="links-list-item">
+              <a className="list-link">Soundcloud</a>
+            </li>
+            <li className="links-list-item">
+              <a className="list-link">Bandcamp</a>
+            </li>
+            <li className="links-list-item">
+              <a className="list-link">Instagram</a>
+            </li>
+            <li className="links-list-item">
+              <a className="list-link">YouTube</a>
+            </li>
+          </ul>
+        </Reveal>
       </div>
     </div>
   );
