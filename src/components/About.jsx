@@ -1,10 +1,23 @@
 import "./About.css";
+import { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import tiareProfilePicture from "../assets/images/about-image.jpeg";
 import { TitleStaggeredReveal } from "./utilities/TitleScrollRevealStaggered";
 import { Reveal } from "./utilities/ScrollRevealText";
-import { LinkReveal } from "./utilities/LinkReveal";
+// import { LinkReveal } from "./utilities/LinkReveal";
 
 const About = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
     <div className="about-page scroll-snap" id="about">
       <h2 className="about-page-intro">
@@ -13,8 +26,24 @@ const About = () => {
           (Auckland)
         </TitleStaggeredReveal>
       </h2>
-
-      <img className="about-profile-image" src={tiareProfilePicture} />
+      <div
+        className="about-profile-image"
+        style={{ overflow: "hidden" }}
+        ref={ref}
+      >
+        <motion.div
+          className="about-profile-image"
+          variants={{
+            hidden: { opacity: 0, y: 0 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 1.2, delay: 0.45 }}
+        >
+          <img className="about-profile-image" src={tiareProfilePicture} />
+        </motion.div>
+      </div>
       <div className="about-description">
         <Reveal>
           <p className="about-description-paragraph about-paragraph-1">
